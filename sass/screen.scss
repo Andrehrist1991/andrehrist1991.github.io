@@ -1,0 +1,516 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+
+@mixin png($img, $type: png) {
+	background: url(../img/#{$img}.png) no-repeat 0 0;
+}
+@mixin jpg($img, $type: jpg) {
+	background: url(../img/#{$img}.jpg) no-repeat 0 0;
+}
+@mixin div($display, $position, $width, $height) {
+    display: $display;
+    position: $position;
+    width: $width;
+    height: $height;
+}
+* {
+	-webkit-user-select: none;
+}
+body {
+	width: 100%;
+	overflow-x: hidden; 
+}
+header{
+	width: 100%;
+	@include jpg(bodybg2);
+	background-size: cover;
+	background-position: top center;
+	-webkit-box-shadow: inset 0px -15px 28px 7px rgba(0,0,0,0.9);
+-moz-box-shadow: inset 0px -15px 28px 7px rgba(0,0,0,0.9);
+box-shadow: inset 0px -15px 28px 7px rgba(0,0,0,0.9);
+}
+.top-line {
+	display: block;
+	position: relative;
+	margin: 0 auto;
+	top: 20px;
+}
+#logo {
+	@include png(logo1);
+	width: 155px;
+	height: 155px;
+
+}
+.top-menu {
+	display: block;
+    position: relative;
+    text-align: center;
+    top: 40px;
+    li>a {
+    	outline: none;
+    	&:visited {
+    		color: #fff;
+    	}
+    }
+}
+.top-menu:hover a {
+    color: transparent;
+    text-shadow: 0 0 3px white;
+
+}
+.top-menu a {
+    color: white;
+    font-family: tahoma;
+    font-size: 1.5em;
+    height: 66px;
+    line-height: 66px;
+    text-decoration: none;
+    transition: all 0.3s ease 0s;
+    width: 150px;
+    font-family: 'Cormorant Infant', serif;
+}
+.top-menu a:hover {
+    border-bottom: 3px solid white;
+    text-decoration: none;
+    color: white;
+    text-shadow: none;
+}
+.top-menu a:active {
+	border: none;
+}
+.top-menu a:visited {
+	color: white;
+}
+.top-social {
+	a:nth-child(2) {
+		margin-left: 20px;
+	}
+	a:hover {
+		border: none;
+	}
+}
+@media screen and (max-width: 620px) {
+    .top-menu a {
+        width: 49%;
+    }
+}
+@media screen and (max-width: 300px) {
+    .top-menu a {
+        width: 100%;
+    }
+}
+.head-effect {
+	@include div(block, relative, 900px, 710px);
+	margin: 0 auto;
+	text-align: center;
+}
+.smoke {
+	@include div(block, relative, 200px, 300px);
+	margin: 0 auto;
+	overflow: hidden;
+
+}
+.smoke-1 {
+	@include div(block, relative, 200px, 300px);
+	@include png(smoke3);
+	background-size: 90%;
+	background-position: top center;
+
+}
+.smoke-2 {
+	@include div(block, relative, 200px, 300px);
+	@include png(smoke4);
+	background-size: 90%;
+	background-position: top center;
+
+}
+.head-cup {
+	display: block;
+	position: relative;
+	@include png(head-cup2);
+	background-size: 90%;
+	background-position: top center;
+	width: 900px;
+	height: 410px;
+	margin: 0 auto;
+	top: -15px;
+}
+#about-us {
+	padding-bottom: 30px;
+	width: 100%;
+	@include jpg(about-us3);
+	background-size: cover;
+	background-position: top center;
+	background-repeat: repeat-x;
+	background-attachment: fixed;
+	-webkit-box-shadow: 0px 10px 13px 0px rgba(23,17,3,1);
+    -moz-box-shadow: 0px 10px 13px 0px rgba(23,17,3,1);
+    box-shadow: 0px 10px 13px 0px rgba(23,17,3,1);
+
+   -webkit-box-shadow: inset 0px 15px 28px 7px rgba(0,0,0,0.9);
+   -moz-box-shadow: inset 0px 15px 28px 7px rgba(0,0,0,0.9);
+    box-shadow: inset 0px 15px 28px 7px rgba(0,0,0,0.9);
+    p {
+    font-family: 'Kurale', serif;
+    font-size: 37px;
+    padding: 20px 60px 0px;
+    color: /*#4D2703*/ black;
+    text-shadow: 2px 2px 0 #bcbcbc, 4px 4px 0 #9c9c9c;
+    text-align: center;
+    font-weight: normal;	
+    }
+    a:hover {
+    	text-decoration: none;
+    }   
+}
+.menu {
+	width: 100%;
+	a:hover {
+    	text-decoration: none;
+    }
+}
+.name-block {
+    margin-top: 0px;
+    font-family: 'Kurale', serif;
+    font-size: 90px;
+    padding-top: 40px;
+    color: #4D2703;
+    text-shadow: -2px 2px 8px rgba(150, 150, 150, 1);
+    text-align: center;
+    font-weight: bold;
+}
+.name-menu {
+	font-size: 60px;
+}
+
+.menu-item {
+    float: left;
+    display: block;
+    position: relative; 
+    right: 20px;
+}
+.menu-info {
+    h3 {
+    	display: inline-block;
+    	margin-top: 0px;
+    	font-family: 'Kurale', serif;
+    }
+    p {
+    	font-family: 'Kurale', serif;
+    	color: #4D2703;
+    	text-shadow: -2px 2px 8px rgba(150, 150, 150, 1);
+    	font-size: 17px;
+    }
+}
+.menu {
+	.pic-menu {
+    	height: 100px;
+    	width: 159px;  	
+    }
+}
+.espresso {
+    @include jpg(espresso);
+    top: 10px;
+    position: relative;
+}
+.doppio {
+    @include jpg(doppio);
+    top: 20px;
+    position: relative;
+}
+.americano {
+    @include jpg(americano);
+    top: 10px;
+    position: relative;
+}
+.cappuchino {
+	@include jpg(cappuchino);
+    top: 10px;
+    position: relative;
+}
+.latte {
+	@include jpg(latte);
+    top: 10px;
+    position: relative;
+}
+.glasse {
+	@include jpg(glasse);
+    top: 10px;
+    position: relative;
+}
+.secret {
+	@include jpg(secret);
+    top: 10px;
+    position: relative;
+}
+.last-menu {
+	position: relative;
+	padding-bottom: 50px;
+}
+.find-us {
+	width: 100%;
+	-webkit-box-shadow: 0px 10px 13px 0px rgba(23,17,3,1);
+    -moz-box-shadow: 0px 10px 13px 0px rgba(23,17,3,1);
+    box-shadow: 0px 10px 13px 0px rgba(23,17,3,1);
+    @include jpg(about-us1);
+    background-size: 157%;
+    overflow: hidden;
+    background-position: 50% 50%;
+   -webkit-box-shadow: inset 0px 15px 28px 7px rgba(0,0,0,0.9);
+   -moz-box-shadow: inset 0px 15px 28px 7px rgba(0,0,0,0.9);
+    box-shadow: inset 0px 15px 28px 7px rgba(0,0,0,0.9);
+    h2 {
+    	color: #4d2703;
+    	font-size: 50px;
+    	margin-top: 30px;
+    	margin-bottom: 30px;
+    }
+    a:hover {
+    	text-decoration: none;
+    }
+}
+.wrapper-squared {
+	width: 88%;
+	height: 1000px;
+	display: block;
+	position: relative;
+	margin: 0 auto;
+	padding-bottom: 50px;
+}
+.squared {
+	display: block;
+	position: relative;
+	height: 1000px;
+	border-radius: 50%;
+	margin: 0 auto;
+	padding: 50px 50px 50px 50px;
+	>.adress:nth-child(2) {
+		font-size: 15px;
+		padding: 37px 5px;
+	}
+}
+.adress {
+	display: block;
+	position: relative;
+	width: 150px;
+	height: 150px;
+	border: 3px solid #fff;
+	border-radius: 60px;
+	background: -moz-linear-gradient(45deg, rgba(192,192,192,1) 0%, rgba(255,255,255,1) 50%, rgba(128,128,128,1) 100%); /* ff3.6+ */
+    background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, rgba(192,192,192,1)), color-stop(50%, rgba(255,255,255,1)), color-stop(100%, rgba(128,128,128,1))); /* safari4+,chrome */
+    background: -webkit-linear-gradient(45deg, rgba(192,192,192,1) 0%, rgba(255,255,255,1) 50%, rgba(128,128,128,1) 100%); /* safari5.1+,chrome10+ */
+    background: -o-linear-gradient(45deg, rgba(192,192,192,1) 0%, rgba(255,255,255,1) 50%, rgba(128,128,128,1) 100%); /* opera 11.10+ */
+    background: -ms-linear-gradient(45deg, rgba(192,192,192,1) 0%, rgba(255,255,255,1) 50%, rgba(128,128,128,1) 100%); /* ie10+ */
+    background: linear-gradient(45deg, rgba(192,192,192,1) 0%, rgba(255,255,255,1) 50%, rgba(128,128,128,1) 100%); /* w3c */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#808080', endColorstr='#c0c0c0',GradientType=1 ); /* ie6-9 */ 
+	cursor: pointer;
+	background-position: 50% 50%;
+	z-index: 1;
+    padding: 10px;
+    font-size: 17px;
+    color: #4d2703;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Kurale', serif;
+    text-shadow: -2px 2px 8px rgba(150, 150, 150, 1);
+	-webkit-box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.75);
+    -webkit-transform: scale(1,1);
+    -webkit-transition-timing-function: ease-out;
+    -webkit-transition-duration: 250ms;
+    -moz-transform: scale(1,1);
+    -moz-transition-timing-function: ease-out;
+    -moz-transition-duration: 250ms;
+    &:hover {
+    -webkit-transform: scale(1.2,1.2);
+    -webkit-transition-timing-function: ease-out;
+    -webkit-transition-duration: 250ms;
+    -moz-transform: scale(1.2,1.2);
+    -moz-transition-timing-function: ease-out;
+    -moz-transition-duration: 250ms;
+    color: #fff;
+    }
+}
+.istor-muz {
+	margin: 0 auto;
+	top: -50px;
+	&:hover {
+		@include jpg(istor-muz);
+		z-index: 4;
+	}
+}
+.univ-27 {
+	margin: 0 auto;
+	bottom: -630px;
+    &:hover {
+		@include jpg(univ-27);
+		z-index: 4;
+	}
+}
+.feierbach {
+	float: right;
+	display: block;
+	align: center;
+	padding-top: 30px;
+	top: 60px;
+	right: -20px;
+	&:hover {
+		@include jpg(feierbach);
+		z-index: 4;
+	}
+}
+.pushkinsk {
+	float: left;
+	top: 60px;
+	padding-top: 30px;
+	left: -20px;
+	&:hover {
+		@include jpg(pushkinsk);
+		z-index: 4;
+	}
+}
+.august23 {
+	float: left;
+	left: 70px;
+	top: 20px;
+	&:hover {
+		@include jpg(august23);
+		z-index: 4;
+	}
+}
+.univ-park {
+	float: right;
+	right: 70px;
+	top: 20px;
+	&:hover {
+		@include jpg(univ-park);
+		z-index: 4;
+	}
+}
+.amurskaya {
+	float: left;
+	padding-top: 30px;
+	left: -80px;
+	top: 30px;
+	&:hover {
+		@include jpg(amurskaya);
+		z-index: 4;
+	}
+}
+.sumskaya {
+	float: right;
+	padding-top: 50px;
+	right: -80px;
+	top: 30px;
+	&:hover {
+		@include jpg(sumskaya);
+		z-index: 4;
+	}
+}
+.middle-squared {
+	display: block;
+	position: relative;
+	width: 90%;
+	height: 800px;
+	border: 3px solid #fff;
+	margin: 0 auto;
+	bottom: 260px;
+	border-radius: 50%;
+	-webkit-box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.75);
+	>.adress:nth-child(4) {
+		padding-top: 50px;
+	}
+}
+.bottom-adress {
+	display: block;
+	position: relative;
+	width: 100%;
+	height: 150px;
+	bottom: -600px;
+}
+.map {
+	display: block;
+	position: relative;
+	width: 65%;
+	border: 3px solid #fff;
+	@include png(navigacija2);
+	-webkit-box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.75);
+	margin: 0 auto;
+	height: 600px;
+	top: -55px;
+	border-radius: 50%;
+	background-position: 50% 50%;
+	//overflow: hidden;
+}
+
+.resp-adress {
+	display: block;
+	position: relative;
+	margin: 0 auto;
+	width: 95%;
+}
+.little-adress {
+	background: -moz-linear-gradient(45deg, rgba(192,192,192,1) 0%, rgba(255,255,255,1) 50%, rgba(128,128,128,1) 100%); /* ff3.6+ */
+    background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, rgba(192,192,192,1)), color-stop(50%, rgba(255,255,255,1)), color-stop(100%, rgba(128,128,128,1))); /* safari4+,chrome */
+    background: -webkit-linear-gradient(45deg, rgba(192,192,192,1) 0%, rgba(255,255,255,1) 50%, rgba(128,128,128,1) 100%); /* safari5.1+,chrome10+ */
+    background: -o-linear-gradient(45deg, rgba(192,192,192,1) 0%, rgba(255,255,255,1) 50%, rgba(128,128,128,1) 100%); /* opera 11.10+ */
+    background: -ms-linear-gradient(45deg, rgba(192,192,192,1) 0%, rgba(255,255,255,1) 50%, rgba(128,128,128,1) 100%); /* ie10+ */
+    background: linear-gradient(45deg, rgba(192,192,192,1) 0%, rgba(255,255,255,1) 50%, rgba(128,128,128,1) 100%); /* w3c */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#808080', endColorstr='#c0c0c0',GradientType=1 ); /* ie6-9 */ 
+	cursor: pointer;
+	color: #4d2703;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Kurale', serif;
+    text-shadow: -2px 2px 8px rgba(150, 150, 150, 1);
+	-webkit-box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.75);
+    border: 2px solid #fff;
+    border-radius: 5px;
+    line-height: 30px;
+    padding: 6px;
+    margin-bottom: 2px;
+    &:hover {
+    	color: #fff;
+    }
+}
+.little-map {
+	display: block;
+	position: relative;
+	margin: 0 auto;
+	border: 2px solid #fff;
+	@include png(navigacija2);
+	height: 400px;
+	background-position: 50% 50%;
+	width: 99%;
+	border-radius: 5px;
+}
+footer {
+	display: block;
+	width: 100%;
+	height: 100px;
+	-webkit-box-shadow: inset 0px 15px 28px 7px rgba(0,0,0,0.9);
+   -moz-box-shadow: inset 0px 15px 28px 7px rgba(0,0,0,0.9);
+    box-shadow: inset 0px 15px 28px 7px rgba(0,0,0,0.9);
+}
+.copyright {
+	@include div(block, relative, 300px, 60px);
+    margin: 0 auto;
+    text-align: center;
+    top: 24px;
+    font-family: 'Kurale', serif;
+    font-weight: bold;
+    a {
+    	outline: none;
+    }
+} 
