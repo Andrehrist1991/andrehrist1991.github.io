@@ -1,0 +1,183 @@
+@media (min-width: 768px) and (max-width: 992px) {
+    
+body {
+	height: 2800px;
+	/* min-height: 1680px;
+	max-height: 2156px; */
+}
+/*Header*/
+header {
+	max-width: 992px;
+	min-width: 768px;
+	min-height: 146px;
+	max-height: 188px;
+}
+.top-line {
+	width: 100%;
+	min-height: 23px;
+	max-height: 30px;
+}
+#wrap-menu {
+	min-width: 588px;
+	max-width: 755px;
+	left: 70px;
+	top: 6px;
+}    
+.top-line-menu > li:nth-child(12) {
+	left: 141px;
+}
+.head-block {
+	max-width: 990px;
+	min-width: 766px;
+	min-height: 115px;
+	max-height: 149px;
+}
+#logo {
+	min-width: 168px;
+	max-width: 215px;
+	height: 78px;
+	background-position: 50% 50%;
+	background-size: 140%; 
+	left: 50px;
+}
+.head-advertising {
+	min-width: 420px;
+	max-width: 539px;
+	min-height: 78px;
+	max-height: 100px;
+}
+.advertising {
+	min-width: 280px;
+	max-width: 360px;
+	min-height: 36px;
+	max-height: 46px;
+	top: 20px;
+	right: 40px;
+	background-size: 102%;
+}
+.head-menu {
+	min-height: 38px;
+	max-height: 49px;
+	max-width: 990px;
+	min-width: 766px;
+	border-bottom: 5px solid black;
+}
+.head-menu-li {
+	min-width: 123px;
+	max-width: 157px;
+	min-height: 38px;
+	max-height: 49px;
+}
+.head-menu-li:hover {
+    bottom: 3px;
+    padding-top: 3px;
+    padding-left: 0.6px; 
+    right: 0.6px;
+}
+.head-menu-last-li {
+	min-width: 161px;
+	max-width: 207px;
+	min-height: 38px;
+	max-height: 49px;
+	float: left;
+}
+.head-menu-last-li:hover {
+    bottom: 3px;
+    padding-top: 3px;
+    padding-left: 0.6px; 
+    right: 0.6px; 
+}
+.head-menu > li > a {
+	font-size: 9px;
+	font-style: Helvetica;
+	padding-top: 8px;
+	padding-left: 9px;
+}
+.more-info {
+	font-size: 8px;
+    top: 1px;
+}
+.head-menu > li:after {
+    width: 2px;
+    height: 24px;
+    bottom: 20px;
+}
+.head-sub-menu {
+    height: 131px;
+    min-width: 123px;
+	max-width: 157px;
+    right: 0.33px;
+    top: 47px;
+    border-top: 5px solid black;
+}
+.head-menu-last-li > ul {
+	min-width: 161px;
+    max-width: 207px;
+}
+
+.head-menu-last-li > ul > li {
+    width: 170px;
+}
+.head-menu li:hover ul{
+    display: block;   
+}
+
+/*MAIN*/
+#main {	
+	width: 100%;
+	height: 2030px; /*Нужно менять*/
+}
+#top-main-block {
+	min-height: 229px;
+	max-height: 294px;
+	width: 100%; 
+}
+#content {
+    width: 100%;
+	height: 2110px;
+	top: -302px; 
+}
+.top-slider-divider {
+	min-width: 558px;
+	max-width: 930px; 
+	top: 10px;
+}
+aside {
+	display: block;
+	position: relative;
+	float: right;
+	width: 325px;
+	height: 1485px;
+	top: -14px;
+	border-left: 1px solid #f1f1f1;
+}
+
+footer {
+	min-width: 768px;
+	max-width: 992px;
+	height: 526px;
+}
+#footer-main-block {
+	width: 944px;
+	height: 290px;
+	margin: 0 auto;
+	overflow: hidden;
+	top: 107px;
+	left: 20px;
+}
+#bottom-block > span {
+	display: block;
+	position: absolute;
+	float: left;
+	color: #999999;
+	font-family: Helvetica;
+	font-size: 12px;
+	line-height: 50px;
+	left: 50px;
+}
+#bottom-block > span:last-child {
+	left: 620px;
+}
+
+
+}
