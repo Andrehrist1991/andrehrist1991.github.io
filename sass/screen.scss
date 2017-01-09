@@ -39,6 +39,9 @@ box-shadow: inset 0px -15px 28px 7px rgba(0,0,0,0.9);
 	margin: 0 auto;
 	top: 20px;
 }
+.head-line {
+	margin: 0 auto;
+}
 #logo {
 	@include png(logo1);
 	width: 155px;
@@ -70,7 +73,6 @@ box-shadow: inset 0px -15px 28px 7px rgba(0,0,0,0.9);
     line-height: 66px;
     text-decoration: none;
     transition: all 0.3s ease 0s;
-    width: 150px;
     font-family: 'Cormorant Infant', serif;
 }
 .top-menu a:hover {
@@ -86,12 +88,16 @@ box-shadow: inset 0px -15px 28px 7px rgba(0,0,0,0.9);
 	color: white;
 }
 .top-social {
-	a:nth-child(2) {
-		margin-left: 20px;
-	}
-	a:hover {
+	width: 120px;
+}
+.top-social a  {
+	border: none;
+	&:hover {
 		border: none;
 	}
+	&:nth-child(2) {
+		padding-left: 20px;
+	}	
 }
 @media screen and (max-width: 620px) {
     .top-menu a {

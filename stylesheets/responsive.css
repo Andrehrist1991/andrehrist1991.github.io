@@ -43,6 +43,11 @@
     display: none;
   }
  }
+ @media only screen and (max-width: 780px) {
+  .head-effect {
+    top: 60px;
+  }
+ }
 @media only screen and (max-width: 780px) {
   #logo {
     margin: 0 auto;

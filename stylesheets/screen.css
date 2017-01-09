@@ -98,35 +98,40 @@ header {
 }
 
 /* line 42, ../sass/screen.scss */
+.head-line {
+  margin: 0 auto;
+}
+
+/* line 45, ../sass/screen.scss */
 #logo {
   background: url(../img/logo1.png) no-repeat 0 0;
   width: 155px;
   height: 155px;
 }
 
-/* line 48, ../sass/screen.scss */
+/* line 51, ../sass/screen.scss */
 .top-menu {
   display: block;
   position: relative;
   text-align: center;
   top: 40px;
 }
-/* line 53, ../sass/screen.scss */
+/* line 56, ../sass/screen.scss */
 .top-menu li > a {
   outline: none;
 }
-/* line 55, ../sass/screen.scss */
+/* line 58, ../sass/screen.scss */
 .top-menu li > a:visited {
   color: #fff;
 }
 
-/* line 60, ../sass/screen.scss */
+/* line 63, ../sass/screen.scss */
 .top-menu:hover a {
   color: transparent;
   text-shadow: 0 0 3px white;
 }
 
-/* line 65, ../sass/screen.scss */
+/* line 68, ../sass/screen.scss */
 .top-menu a {
   color: white;
   font-family: tahoma;
@@ -135,11 +140,10 @@ header {
   line-height: 66px;
   text-decoration: none;
   transition: all 0.3s ease 0s;
-  width: 150px;
   font-family: 'Cormorant Infant', serif;
 }
 
-/* line 76, ../sass/screen.scss */
+/* line 78, ../sass/screen.scss */
 .top-menu a:hover {
   border-bottom: 3px solid white;
   text-decoration: none;
@@ -147,38 +151,47 @@ header {
   text-shadow: none;
 }
 
-/* line 82, ../sass/screen.scss */
+/* line 84, ../sass/screen.scss */
 .top-menu a:active {
   border: none;
 }
 
-/* line 85, ../sass/screen.scss */
+/* line 87, ../sass/screen.scss */
 .top-menu a:visited {
   color: white;
 }
 
-/* line 89, ../sass/screen.scss */
-.top-social a:nth-child(2) {
-  margin-left: 20px;
+/* line 90, ../sass/screen.scss */
+.top-social {
+  width: 120px;
 }
-/* line 92, ../sass/screen.scss */
+
+/* line 93, ../sass/screen.scss */
+.top-social a {
+  border: none;
+}
+/* line 95, ../sass/screen.scss */
 .top-social a:hover {
   border: none;
 }
+/* line 98, ../sass/screen.scss */
+.top-social a:nth-child(2) {
+  padding-left: 20px;
+}
 
 @media screen and (max-width: 620px) {
-  /* line 97, ../sass/screen.scss */
+  /* line 103, ../sass/screen.scss */
   .top-menu a {
     width: 49%;
   }
 }
 @media screen and (max-width: 300px) {
-  /* line 102, ../sass/screen.scss */
+  /* line 108, ../sass/screen.scss */
   .top-menu a {
     width: 100%;
   }
 }
-/* line 106, ../sass/screen.scss */
+/* line 112, ../sass/screen.scss */
 .head-effect {
   display: block;
   position: relative;
@@ -188,7 +201,7 @@ header {
   text-align: center;
 }
 
-/* line 111, ../sass/screen.scss */
+/* line 117, ../sass/screen.scss */
 .smoke {
   display: block;
   position: relative;
@@ -198,7 +211,7 @@ header {
   overflow: hidden;
 }
 
-/* line 117, ../sass/screen.scss */
+/* line 123, ../sass/screen.scss */
 .smoke-1 {
   display: block;
   position: relative;
@@ -209,7 +222,7 @@ header {
   background-position: top center;
 }
 
-/* line 124, ../sass/screen.scss */
+/* line 130, ../sass/screen.scss */
 .smoke-2 {
   display: block;
   position: relative;
@@ -220,7 +233,7 @@ header {
   background-position: top center;
 }
 
-/* line 131, ../sass/screen.scss */
+/* line 137, ../sass/screen.scss */
 .head-cup {
   display: block;
   position: relative;
@@ -233,7 +246,7 @@ header {
   top: -15px;
 }
 
-/* line 142, ../sass/screen.scss */
+/* line 148, ../sass/screen.scss */
 #about-us {
   padding-bottom: 30px;
   width: 100%;
@@ -249,7 +262,7 @@ header {
   -moz-box-shadow: inset 0px 15px 28px 7px rgba(0, 0, 0, 0.9);
   box-shadow: inset 0px 15px 28px 7px rgba(0, 0, 0, 0.9);
 }
-/* line 157, ../sass/screen.scss */
+/* line 163, ../sass/screen.scss */
 #about-us p {
   font-family: 'Kurale', serif;
   font-size: 37px;
@@ -259,21 +272,21 @@ header {
   text-align: center;
   font-weight: normal;
 }
-/* line 166, ../sass/screen.scss */
+/* line 172, ../sass/screen.scss */
 #about-us a:hover {
   text-decoration: none;
 }
 
-/* line 170, ../sass/screen.scss */
+/* line 176, ../sass/screen.scss */
 .menu {
   width: 100%;
 }
-/* line 172, ../sass/screen.scss */
+/* line 178, ../sass/screen.scss */
 .menu a:hover {
   text-decoration: none;
 }
 
-/* line 176, ../sass/screen.scss */
+/* line 182, ../sass/screen.scss */
 .name-block {
   margin-top: 0px;
   font-family: 'Kurale', serif;
@@ -285,12 +298,12 @@ header {
   font-weight: bold;
 }
 
-/* line 186, ../sass/screen.scss */
+/* line 192, ../sass/screen.scss */
 .name-menu {
   font-size: 60px;
 }
 
-/* line 190, ../sass/screen.scss */
+/* line 196, ../sass/screen.scss */
 .menu-item {
   float: left;
   display: block;
@@ -298,13 +311,13 @@ header {
   right: 20px;
 }
 
-/* line 197, ../sass/screen.scss */
+/* line 203, ../sass/screen.scss */
 .menu-info h3 {
   display: inline-block;
   margin-top: 0px;
   font-family: 'Kurale', serif;
 }
-/* line 202, ../sass/screen.scss */
+/* line 208, ../sass/screen.scss */
 .menu-info p {
   font-family: 'Kurale', serif;
   color: #4D2703;
@@ -312,68 +325,68 @@ header {
   font-size: 17px;
 }
 
-/* line 210, ../sass/screen.scss */
+/* line 216, ../sass/screen.scss */
 .menu .pic-menu {
   height: 100px;
   width: 159px;
 }
 
-/* line 215, ../sass/screen.scss */
+/* line 221, ../sass/screen.scss */
 .espresso {
   background: url(../img/espresso.jpg) no-repeat 0 0;
   top: 10px;
   position: relative;
 }
 
-/* line 220, ../sass/screen.scss */
+/* line 226, ../sass/screen.scss */
 .doppio {
   background: url(../img/doppio.jpg) no-repeat 0 0;
   top: 20px;
   position: relative;
 }
 
-/* line 225, ../sass/screen.scss */
+/* line 231, ../sass/screen.scss */
 .americano {
   background: url(../img/americano.jpg) no-repeat 0 0;
   top: 10px;
   position: relative;
 }
 
-/* line 230, ../sass/screen.scss */
+/* line 236, ../sass/screen.scss */
 .cappuchino {
   background: url(../img/cappuchino.jpg) no-repeat 0 0;
   top: 10px;
   position: relative;
 }
 
-/* line 235, ../sass/screen.scss */
+/* line 241, ../sass/screen.scss */
 .latte {
   background: url(../img/latte.jpg) no-repeat 0 0;
   top: 10px;
   position: relative;
 }
 
-/* line 240, ../sass/screen.scss */
+/* line 246, ../sass/screen.scss */
 .glasse {
   background: url(../img/glasse.jpg) no-repeat 0 0;
   top: 10px;
   position: relative;
 }
 
-/* line 245, ../sass/screen.scss */
+/* line 251, ../sass/screen.scss */
 .secret {
   background: url(../img/secret.jpg) no-repeat 0 0;
   top: 10px;
   position: relative;
 }
 
-/* line 250, ../sass/screen.scss */
+/* line 256, ../sass/screen.scss */
 .last-menu {
   position: relative;
   padding-bottom: 50px;
 }
 
-/* line 254, ../sass/screen.scss */
+/* line 260, ../sass/screen.scss */
 .find-us {
   width: 100%;
   -webkit-box-shadow: 0px 10px 13px 0px #171103;
@@ -387,19 +400,19 @@ header {
   -moz-box-shadow: inset 0px 15px 28px 7px rgba(0, 0, 0, 0.9);
   box-shadow: inset 0px 15px 28px 7px rgba(0, 0, 0, 0.9);
 }
-/* line 266, ../sass/screen.scss */
+/* line 272, ../sass/screen.scss */
 .find-us h2 {
   color: #4d2703;
   font-size: 50px;
   margin-top: 30px;
   margin-bottom: 30px;
 }
-/* line 272, ../sass/screen.scss */
+/* line 278, ../sass/screen.scss */
 .find-us a:hover {
   text-decoration: none;
 }
 
-/* line 276, ../sass/screen.scss */
+/* line 282, ../sass/screen.scss */
 .wrapper-squared {
   width: 88%;
   height: 1000px;
@@ -409,7 +422,7 @@ header {
   padding-bottom: 50px;
 }
 
-/* line 284, ../sass/screen.scss */
+/* line 290, ../sass/screen.scss */
 .squared {
   display: block;
   position: relative;
@@ -418,13 +431,13 @@ header {
   margin: 0 auto;
   padding: 50px 50px 50px 50px;
 }
-/* line 291, ../sass/screen.scss */
+/* line 297, ../sass/screen.scss */
 .squared > .adress:nth-child(2) {
   font-size: 15px;
   padding: 37px 5px;
 }
 
-/* line 296, ../sass/screen.scss */
+/* line 302, ../sass/screen.scss */
 .adress {
   display: block;
   position: relative;
@@ -466,7 +479,7 @@ header {
   -moz-transition-timing-function: ease-out;
   -moz-transition-duration: 250ms;
 }
-/* line 329, ../sass/screen.scss */
+/* line 335, ../sass/screen.scss */
 .adress:hover {
   -webkit-transform: scale(1.2, 1.2);
   -webkit-transition-timing-function: ease-out;
@@ -477,29 +490,29 @@ header {
   color: #fff;
 }
 
-/* line 339, ../sass/screen.scss */
+/* line 345, ../sass/screen.scss */
 .istor-muz {
   margin: 0 auto;
   top: -50px;
 }
-/* line 342, ../sass/screen.scss */
+/* line 348, ../sass/screen.scss */
 .istor-muz:hover {
   background: url(../img/istor-muz.jpg) no-repeat 0 0;
   z-index: 4;
 }
 
-/* line 347, ../sass/screen.scss */
+/* line 353, ../sass/screen.scss */
 .univ-27 {
   margin: 0 auto;
   bottom: -630px;
 }
-/* line 350, ../sass/screen.scss */
+/* line 356, ../sass/screen.scss */
 .univ-27:hover {
   background: url(../img/univ-27.jpg) no-repeat 0 0;
   z-index: 4;
 }
 
-/* line 355, ../sass/screen.scss */
+/* line 361, ../sass/screen.scss */
 .feierbach {
   float: right;
   display: block;
@@ -508,76 +521,76 @@ header {
   top: 60px;
   right: -20px;
 }
-/* line 362, ../sass/screen.scss */
+/* line 368, ../sass/screen.scss */
 .feierbach:hover {
   background: url(../img/feierbach.jpg) no-repeat 0 0;
   z-index: 4;
 }
 
-/* line 367, ../sass/screen.scss */
+/* line 373, ../sass/screen.scss */
 .pushkinsk {
   float: left;
   top: 60px;
   padding-top: 30px;
   left: -20px;
 }
-/* line 372, ../sass/screen.scss */
+/* line 378, ../sass/screen.scss */
 .pushkinsk:hover {
   background: url(../img/pushkinsk.jpg) no-repeat 0 0;
   z-index: 4;
 }
 
-/* line 377, ../sass/screen.scss */
+/* line 383, ../sass/screen.scss */
 .august23 {
   float: left;
   left: 70px;
   top: 20px;
 }
-/* line 381, ../sass/screen.scss */
+/* line 387, ../sass/screen.scss */
 .august23:hover {
   background: url(../img/august23.jpg) no-repeat 0 0;
   z-index: 4;
 }
 
-/* line 386, ../sass/screen.scss */
+/* line 392, ../sass/screen.scss */
 .univ-park {
   float: right;
   right: 70px;
   top: 20px;
 }
-/* line 390, ../sass/screen.scss */
+/* line 396, ../sass/screen.scss */
 .univ-park:hover {
   background: url(../img/univ-park.jpg) no-repeat 0 0;
   z-index: 4;
 }
 
-/* line 395, ../sass/screen.scss */
+/* line 401, ../sass/screen.scss */
 .amurskaya {
   float: left;
   padding-top: 30px;
   left: -80px;
   top: 30px;
 }
-/* line 400, ../sass/screen.scss */
+/* line 406, ../sass/screen.scss */
 .amurskaya:hover {
   background: url(../img/amurskaya.jpg) no-repeat 0 0;
   z-index: 4;
 }
 
-/* line 405, ../sass/screen.scss */
+/* line 411, ../sass/screen.scss */
 .sumskaya {
   float: right;
   padding-top: 50px;
   right: -80px;
   top: 30px;
 }
-/* line 410, ../sass/screen.scss */
+/* line 416, ../sass/screen.scss */
 .sumskaya:hover {
   background: url(../img/sumskaya.jpg) no-repeat 0 0;
   z-index: 4;
 }
 
-/* line 415, ../sass/screen.scss */
+/* line 421, ../sass/screen.scss */
 .middle-squared {
   display: block;
   position: relative;
@@ -591,12 +604,12 @@ header {
   -moz-box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.75);
 }
-/* line 427, ../sass/screen.scss */
+/* line 433, ../sass/screen.scss */
 .middle-squared > .adress:nth-child(4) {
   padding-top: 50px;
 }
 
-/* line 431, ../sass/screen.scss */
+/* line 437, ../sass/screen.scss */
 .bottom-adress {
   display: block;
   position: relative;
@@ -605,7 +618,7 @@ header {
   bottom: -600px;
 }
 
-/* line 438, ../sass/screen.scss */
+/* line 444, ../sass/screen.scss */
 .map {
   display: block;
   position: relative;
@@ -622,7 +635,7 @@ header {
   background-position: 50% 50%;
 }
 
-/* line 455, ../sass/screen.scss */
+/* line 461, ../sass/screen.scss */
 .resp-adress {
   display: block;
   position: relative;
@@ -630,7 +643,7 @@ header {
   width: 95%;
 }
 
-/* line 461, ../sass/screen.scss */
+/* line 467, ../sass/screen.scss */
 .little-adress {
   background: -moz-linear-gradient(45deg, silver 0%, white 50%, gray 100%);
   /* ff3.6+ */
@@ -661,12 +674,12 @@ header {
   padding: 6px;
   margin-bottom: 2px;
 }
-/* line 483, ../sass/screen.scss */
+/* line 489, ../sass/screen.scss */
 .little-adress:hover {
   color: #fff;
 }
 
-/* line 487, ../sass/screen.scss */
+/* line 493, ../sass/screen.scss */
 .little-map {
   display: block;
   position: relative;
@@ -679,7 +692,7 @@ header {
   border-radius: 5px;
 }
 
-/* line 498, ../sass/screen.scss */
+/* line 504, ../sass/screen.scss */
 footer {
   display: block;
   width: 100%;
@@ -689,7 +702,7 @@ footer {
   box-shadow: inset 0px 15px 28px 7px rgba(0, 0, 0, 0.9);
 }
 
-/* line 506, ../sass/screen.scss */
+/* line 512, ../sass/screen.scss */
 .copyright {
   display: block;
   position: relative;
@@ -701,7 +714,7 @@ footer {
   font-family: 'Kurale', serif;
   font-weight: bold;
 }
-/* line 513, ../sass/screen.scss */
+/* line 519, ../sass/screen.scss */
 .copyright a {
   outline: none;
 }
