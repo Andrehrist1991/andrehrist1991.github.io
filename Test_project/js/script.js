@@ -1,6 +1,10 @@
 
 $(document).ready(function(){
 
+  $(".subscription").animated("flipInY", "flipInY");
+  $(".team_members_member").animated("zoomIn", "zoomIn");
+  $(".contact_forms, .contacts_get_in_touch").animated("zoomIn", "zoomIn");
+
 	$(".owl-carousel").owlCarousel({
 		loop : true,
         //autoHeight : true,
@@ -14,6 +18,7 @@ $(document).ready(function(){
 	  navText : ""
 	});
   
+
 
 });
 
