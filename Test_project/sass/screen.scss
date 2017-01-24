@@ -1,0 +1,491 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+
+$blue: #44c0c2;
+
+@mixin png($img, $type: png) {
+	background: url(../img/#{$img}.png) no-repeat 0 0;
+}
+@mixin jpg($img, $type: jpg) {
+	background: url(../img/#{$img}.jpg) no-repeat 0 0;
+}
+
+* {
+	box-sizing: border-box;
+}
+body {
+	font-family: 'Open Sans', sans-serif;
+	overflow-x: hidden;
+}
+
+header {
+	display: block;
+	width: 100%; 
+	overflow: hidden;
+}
+
+#logo {
+  color: $blue;
+  text-align: left;
+  position: relative;
+  float: left;
+  text-decoration: none;
+  font-family: 'Lobster', cursive;
+  font-size: 43pt;
+  cursor: pointer;
+  left: 135px;
+  top: 18px;
+}
+#wrap-menu {
+   position: relative;
+   float: right;
+   right: 110px;
+  li {
+  	float: left;
+  	padding: 40px 20px;
+  	a {
+  		text-decoration: none;
+  		color: #484c55;
+  		font-size: 15pt;
+  		font-family: 'Open Sans', sans-serif;
+  	}
+  	&:hover {
+  		background-color: #f8f9fb;
+  		transition: all 0.1s ease 0s;
+  		-webkit-transition: all 0.3s ease 0s;
+  		-moz-transition: all 0.3s ease 0s;
+  		-ms-transition: all 0.3s ease 0s;
+  		-webkit-box-shadow: inset 0px -7px 0px -3px rgba(68,192,194,1);
+        -moz-box-shadow: inset 0px -7px 0px -3px rgba(68,192,194,1);
+        box-shadow: inset 0px -7px 0px -3px rgba(68,192,194,1);
+  		a {
+  		color: $blue;
+  	}
+  	}
+  }
+}
+#news {
+	display: block;
+    position: relative;
+    width: 100%;
+    //overflow: hidden;
+}
+.review-item {
+	width: 100%;
+	min-height: 565px;
+	height: 565px;
+	max-height: 1130px;
+	background-repeat: no-repeat;
+}
+.item1 {
+	@include jpg(man);
+	display: block;	
+	width: 100%;
+	background-size: 100%;
+    background-position: 50% 20%;
+}
+.item2 {
+	@include jpg(sky);
+	display: block;
+	width: 100%;
+	background-size: 100%;
+    background-position: 50% 20%;  
+}
+.item3 {
+	@include jpg(tree);
+	display: block;
+	width: 100%;
+	background-size: 100%;
+    background-position: 50% 20%;   
+}
+.item4 {
+	@include jpg(leaf);
+	display: block;
+	width: 100%;
+	background-size: 100%;
+    background-position: 50% 20%;   
+}
+.owl-nav {
+	position: relative;
+	div {
+		display: block;
+		position: relative;
+		width: 52px;
+		height: 52px;
+		border-radius: 50%;
+		@include png(arrow);
+		bottom: 290px;
+	}	
+}
+.owl-prev {
+	float: left;
+	left: 28px;
+}
+.owl-next {
+	float: right;
+	right: 28px;
+	-moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg); 
+    -webkit-transform: rotate(180deg);
+    -o-transform: rotate(180deg); 
+    transform: rotate(180deg);
+}
+.info {
+	display: block;
+	position: relative;
+	margin: 0 auto;
+	top: 136px;
+	text-align: center;
+	font-family: 'Open Sans', sans-serif;
+	color: #fff;
+	p {
+		position: relative;
+		display: block;
+		font-size: 23px;
+		width: 380px;
+		top: 45px;
+		text-align: center;
+		margin: 0 auto;
+		line-height: 30px;
+		height: 60px;
+		overflow: hidden; /*Убрать, если не будет работать скрипт*/
+	}
+}
+.main-heading {
+    position: relative; 
+    font-size: 63px;
+    text-align: center;
+    font-weight: 600; 
+}
+.learn-more {
+  display: inline-block;
+  position: relative;
+  padding: 20px 40px;
+  top: 100px;
+  color: #fff;
+  border: 2px solid #fff;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 26px;
+  font-weight: 800;
+  text-align: center;
+  outline: none;
+  margin: 0 auto;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.2s ease-out,
+              border-color 0.2s ease-out;
+}
+.learn-more:hover,
+.learn-more:active {
+  background-color: #fff; /* fallback */
+  background-color: rgba(255, 255, 255, 0.4);
+  border-color: #fff; /* fallback */
+  border-color: rgba(255, 255, 255, 0.4);
+  transition: background-color 0.3s ease-in,
+              border-color 0.3s ease-in;
+}
+.team {
+	width: 100%;
+	display: block;
+	position: relative;
+	float: left;
+	color: #4e525d;
+    font-family: 'Open Sans', sans-serif;
+	text-align: center;
+	h2 {
+		font-size: 42pt;
+		position: relative;
+		display: block;
+		top: 45px;
+		margin-bottom: 180px;
+	}
+}
+.team_members {
+	position: relative;
+	display: block;	
+	margin: 0 auto;
+    width: 1200px;
+}
+.team_members_member {
+	float: left;
+	position: relative;
+	width: 300px;
+	height: 530px;
+}
+.team_members_member_photo {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #eeeef0;
+    margin: 0 auto;
+    cursor: default;
+    &:hover {
+    	span {
+    		display: block;
+    	}
+    }
+    span {
+    color: #f46d6d;
+    font-family: 'Open Sans', sans-serif;
+    position: relative;
+    font-weight: 800;
+    font-size: 86px;
+    top: 50px;
+    display: none;
+    }
+}
+.member_info {
+	position: relative;
+	font-size: 16pt;
+	top: 70px;
+}
+.member_position {
+	position: relative;
+	font-size: 11pt;
+	top: 14px;
+}
+.member_duties {
+    position: relative;
+    top: 33px;
+    font-size: 14px;
+	padding-right: 30px;
+}
+.wrap {
+	display: block;
+	position: relative;
+	margin: 0 auto;
+	width: 100%;	
+}
+.member_4 {
+	margin: 0 auto;
+	display: block;
+	position: relative;
+	left: 300px;
+}
+.subscriptions {	
+	display: block;
+	position: relative;
+	float: left;
+	width: 100%;
+	background-color: #f1f1f1;
+	padding-bottom: 215px;
+}
+.subscriptions_wrap {
+    display: block;
+    position: relative;
+    margin: 0 auto;
+	width: 1170px;
+	top: 117px;
+}
+.subscription {
+	display: block;
+	position: relative;
+	float: left;
+	&:nth-child(2) {
+		left: 30px;
+	}
+	&:nth-child(3) {
+		left: 60px;
+	}
+	li {
+		color: #8c9299;
+		font-size: 12pt;
+		text-align: center;
+		width: 370px;
+		padding-top: 15px;
+		padding-bottom: 15px;
+		background-color: #fcfcfc;
+		border: 1px solid #ecf0f1;
+		&:nth-child(1) {
+			background-color: #405360;
+			color: #fff;
+			font-size: 16pt;
+			border-top-left-radius: 5px;
+			border-top-right-radius: 5px;
+		}
+		&:nth-child(2) {
+			color: #485460;
+			font-size: 14pt;
+			background-color: #F8F9FB;
+		}
+		&:last-child {
+			background-color: #F8F9FB;
+			border-bottom-left-radius: 5px;
+			border-bottom-right-radius: 5px;
+		}
+	}
+	form input {
+		position: relative;
+		width: 170px;
+		height: 40px;
+		margin: 13px auto;
+		background-color: #738594;
+		border-radius: 5px;
+		color: #fff;
+		font-size: 15px;
+		font-family: 'Open Sans', sans-serif;
+		font-weight: bold;
+		border: none;
+		cursor: pointer;
+	}
+}
+footer {
+	display: block;
+	position: relative;
+	float: left;
+	width: 100%;
+	color: #fff;
+	@include jpg(footer);
+	background-size: 100%;
+	background-position: 50% 50%;
+	background-repeat: repeat-y;
+	h2 {
+	    font-size: 42pt;
+		position: relative;
+		display: block;
+		text-align: center;
+		top: 100px;
+		margin-bottom: 180px;	
+	}
+}
+.contacts_wrap {
+	display: block;
+	position: relative;
+	width: 1170px;
+	margin: 0 auto;
+	height: 335px;
+	margin-bottom: 95px;
+}
+.contacts_get_in_touch {
+    width: 430px;
+    float: left;
+    h3 {
+    	color: #fff;
+    	font-size: 17pt;
+    }
+    .contacts_info {
+    	position: relative;
+    	font-size: 10pt;
+    	top: 15px;
+    	line-height: 22px;
+    } 
+}
+.social_buttons {
+	position: relative;
+	display: block;
+	float: left;
+	top: 40px;
+	li {
+		float: left;
+		position: relative;
+		width: 40px;
+		height: 40px;
+		border-radius: 50%;
+		&:nth-child(1) {
+			background-color: #23589A;
+			&:hover {
+				background-color: #203D9D;
+			}
+		}
+		
+		&:nth-child(2) {
+			background-color: #00C3F5;
+			left: 14px;
+			&:hover {
+				background-color: #01ABF3;
+			}
+		}
+		&:nth-child(3) {
+			background-color: #FF4B3E;
+			left: 28px;
+			&:hover {
+				background-color: #D01C20;
+			}
+        } 
+        a {
+        	font-family: "fontello";
+            font-style: normal;
+            font-weight: normal;
+            text-decoration: none;
+            position: relative;
+            outline: none;
+            font-size: 20px;
+            color: #fff;
+            top: 10px;
+            left: 7px;
+            
+        }
+  }
+}
+.posted {
+	position: relative;
+	float: left;
+	color: #bface2;
+	top: 100px;
+	font-size: 14px;
+	left: -116px;
+	line-height: 25px;
+}
+.contact_forms {
+	float: right;
+	width: 570px;
+	form {
+		font-family: 'Open Sans', sans-serif;
+		input[type="text"], input[type="email"] {
+			position: relative;
+			border-radius: 6px;
+			font-size: 19px;
+			color: #c1c1c1;
+			padding-left: 15px;
+			overflow: hidden;
+			&:nth-child(1), &:nth-child(2) {
+				width: 270px;
+				height: 45px;
+			}
+			&:nth-child(2) {
+				left: 25px;
+			}
+		}
+		textarea {
+           position: relative;
+           font-family: 'Open Sans', sans-serif;
+		   width: 570px;
+		   height: 180px;
+		   top: 30px;
+		   border-radius: 6px;
+		   font-size: 19px;
+			color: #c1c1c1;
+			padding-left: 15px;
+			overflow: hidden;
+			padding-top: 20px;
+			resize: none;
+		}
+		
+	}
+}
+.send {
+	    position: relative;
+	    float: right;
+		width: 170px;
+		height: 50px;
+		margin: 13px auto;
+		background-color: $blue;
+		border-radius: 5px;
+		color: #fff;
+		font-size: 20px;
+		font-family: 'Open Sans', sans-serif;
+		border: none;
+		cursor: pointer;
+		top: 45px;
+}
+
+#name:focus {
+   border: none;
+   outline: none;
+}
+

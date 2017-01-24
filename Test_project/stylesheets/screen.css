@@ -1,0 +1,643 @@
+@charset "UTF-8";
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 5, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 17, ../sass/screen.scss */
+* {
+  box-sizing: border-box;
+}
+
+/* line 20, ../sass/screen.scss */
+body {
+  font-family: 'Open Sans', sans-serif;
+  overflow-x: hidden;
+}
+
+/* line 25, ../sass/screen.scss */
+header {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* line 31, ../sass/screen.scss */
+#logo {
+  color: #44c0c2;
+  text-align: left;
+  position: relative;
+  float: left;
+  text-decoration: none;
+  font-family: 'Lobster', cursive;
+  font-size: 43pt;
+  cursor: pointer;
+  left: 135px;
+  top: 18px;
+}
+
+/* line 43, ../sass/screen.scss */
+#wrap-menu {
+  position: relative;
+  float: right;
+  right: 110px;
+}
+/* line 47, ../sass/screen.scss */
+#wrap-menu li {
+  float: left;
+  padding: 40px 20px;
+}
+/* line 50, ../sass/screen.scss */
+#wrap-menu li a {
+  text-decoration: none;
+  color: #484c55;
+  font-size: 15pt;
+  font-family: 'Open Sans', sans-serif;
+}
+/* line 56, ../sass/screen.scss */
+#wrap-menu li:hover {
+  background-color: #f8f9fb;
+  transition: all 0.1s ease 0s;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -ms-transition: all 0.3s ease 0s;
+  -webkit-box-shadow: inset 0px -7px 0px -3px #44c0c2;
+  -moz-box-shadow: inset 0px -7px 0px -3px #44c0c2;
+  box-shadow: inset 0px -7px 0px -3px #44c0c2;
+}
+/* line 65, ../sass/screen.scss */
+#wrap-menu li:hover a {
+  color: #44c0c2;
+}
+
+/* line 71, ../sass/screen.scss */
+#news {
+  display: block;
+  position: relative;
+  width: 100%;
+}
+
+/* line 77, ../sass/screen.scss */
+.review-item {
+  width: 100%;
+  min-height: 565px;
+  height: 565px;
+  max-height: 1130px;
+  background-repeat: no-repeat;
+}
+
+/* line 84, ../sass/screen.scss */
+.item1 {
+  background: url(../img/man.jpg) no-repeat 0 0;
+  display: block;
+  width: 100%;
+  background-size: 100%;
+  background-position: 50% 20%;
+}
+
+/* line 91, ../sass/screen.scss */
+.item2 {
+  background: url(../img/sky.jpg) no-repeat 0 0;
+  display: block;
+  width: 100%;
+  background-size: 100%;
+  background-position: 50% 20%;
+}
+
+/* line 98, ../sass/screen.scss */
+.item3 {
+  background: url(../img/tree.jpg) no-repeat 0 0;
+  display: block;
+  width: 100%;
+  background-size: 100%;
+  background-position: 50% 20%;
+}
+
+/* line 105, ../sass/screen.scss */
+.item4 {
+  background: url(../img/leaf.jpg) no-repeat 0 0;
+  display: block;
+  width: 100%;
+  background-size: 100%;
+  background-position: 50% 20%;
+}
+
+/* line 112, ../sass/screen.scss */
+.owl-nav {
+  position: relative;
+}
+/* line 114, ../sass/screen.scss */
+.owl-nav div {
+  display: block;
+  position: relative;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: url(../img/arrow.png) no-repeat 0 0;
+  bottom: 290px;
+}
+
+/* line 124, ../sass/screen.scss */
+.owl-prev {
+  float: left;
+  left: 28px;
+}
+
+/* line 128, ../sass/screen.scss */
+.owl-next {
+  float: right;
+  right: 28px;
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+/* line 137, ../sass/screen.scss */
+.info {
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  top: 136px;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  color: #fff;
+}
+/* line 145, ../sass/screen.scss */
+.info p {
+  position: relative;
+  display: block;
+  font-size: 23px;
+  width: 380px;
+  top: 45px;
+  text-align: center;
+  margin: 0 auto;
+  line-height: 30px;
+  height: 60px;
+  overflow: hidden;
+  /*╨г╨▒╤А╨░╤В╤М, ╨╡╤Б╨╗╨╕ ╨╜╨╡ ╨▒╤Г╨┤╨╡╤В ╤А╨░╨▒╨╛╤В╨░╤В╤М ╤Б╨║╤А╨╕╨┐╤В*/
+}
+
+/* line 158, ../sass/screen.scss */
+.main-heading {
+  position: relative;
+  font-size: 63px;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* line 164, ../sass/screen.scss */
+.learn-more {
+  display: inline-block;
+  position: relative;
+  padding: 20px 40px;
+  top: 100px;
+  color: #fff;
+  border: 2px solid #fff;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 26px;
+  font-weight: 800;
+  text-align: center;
+  outline: none;
+  margin: 0 auto;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.2s ease-out, border-color 0.2s ease-out;
+}
+
+/* line 182, ../sass/screen.scss */
+.learn-more:hover,
+.learn-more:active {
+  background-color: #fff;
+  /* fallback */
+  background-color: rgba(255, 255, 255, 0.4);
+  border-color: #fff;
+  /* fallback */
+  border-color: rgba(255, 255, 255, 0.4);
+  transition: background-color 0.3s ease-in, border-color 0.3s ease-in;
+}
+
+/* line 191, ../sass/screen.scss */
+.team {
+  width: 100%;
+  display: block;
+  position: relative;
+  float: left;
+  color: #4e525d;
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+}
+/* line 199, ../sass/screen.scss */
+.team h2 {
+  font-size: 42pt;
+  position: relative;
+  display: block;
+  top: 45px;
+  margin-bottom: 180px;
+}
+
+/* line 207, ../sass/screen.scss */
+.team_members {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  width: 1200px;
+}
+
+/* line 213, ../sass/screen.scss */
+.team_members_member {
+  float: left;
+  position: relative;
+  width: 300px;
+  height: 530px;
+}
+
+/* line 219, ../sass/screen.scss */
+.team_members_member_photo {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: #eeeef0;
+  margin: 0 auto;
+  cursor: default;
+}
+/* line 228, ../sass/screen.scss */
+.team_members_member_photo:hover span {
+  display: block;
+}
+/* line 232, ../sass/screen.scss */
+.team_members_member_photo span {
+  color: #f46d6d;
+  font-family: 'Open Sans', sans-serif;
+  position: relative;
+  font-weight: 800;
+  font-size: 86px;
+  top: 50px;
+  display: none;
+}
+
+/* line 242, ../sass/screen.scss */
+.member_info {
+  position: relative;
+  font-size: 16pt;
+  top: 70px;
+}
+
+/* line 247, ../sass/screen.scss */
+.member_position {
+  position: relative;
+  font-size: 11pt;
+  top: 14px;
+}
+
+/* line 252, ../sass/screen.scss */
+.member_duties {
+  position: relative;
+  top: 33px;
+  font-size: 14px;
+  padding-right: 30px;
+}
+
+/* line 258, ../sass/screen.scss */
+.wrap {
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* line 264, ../sass/screen.scss */
+.member_4 {
+  margin: 0 auto;
+  display: block;
+  position: relative;
+  left: 300px;
+}
+
+/* line 270, ../sass/screen.scss */
+.subscriptions {
+  display: block;
+  position: relative;
+  float: left;
+  width: 100%;
+  background-color: #f1f1f1;
+  padding-bottom: 215px;
+}
+
+/* line 278, ../sass/screen.scss */
+.subscriptions_wrap {
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  width: 1170px;
+  top: 117px;
+}
+
+/* line 285, ../sass/screen.scss */
+.subscription {
+  display: block;
+  position: relative;
+  float: left;
+}
+/* line 289, ../sass/screen.scss */
+.subscription:nth-child(2) {
+  left: 30px;
+}
+/* line 292, ../sass/screen.scss */
+.subscription:nth-child(3) {
+  left: 60px;
+}
+/* line 295, ../sass/screen.scss */
+.subscription li {
+  color: #8c9299;
+  font-size: 12pt;
+  text-align: center;
+  width: 370px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: #fcfcfc;
+  border: 1px solid #ecf0f1;
+}
+/* line 304, ../sass/screen.scss */
+.subscription li:nth-child(1) {
+  background-color: #405360;
+  color: #fff;
+  font-size: 16pt;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+/* line 311, ../sass/screen.scss */
+.subscription li:nth-child(2) {
+  color: #485460;
+  font-size: 14pt;
+  background-color: #F8F9FB;
+}
+/* line 316, ../sass/screen.scss */
+.subscription li:last-child {
+  background-color: #F8F9FB;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+/* line 322, ../sass/screen.scss */
+.subscription form input {
+  position: relative;
+  width: 170px;
+  height: 40px;
+  margin: 13px auto;
+  background-color: #738594;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 15px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+/* line 337, ../sass/screen.scss */
+footer {
+  display: block;
+  position: relative;
+  float: left;
+  width: 100%;
+  color: #fff;
+  background: url(../img/footer.jpg) no-repeat 0 0;
+  background-size: 100%;
+  background-position: 50% 50%;
+  background-repeat: repeat-y;
+}
+/* line 347, ../sass/screen.scss */
+footer h2 {
+  font-size: 42pt;
+  position: relative;
+  display: block;
+  text-align: center;
+  top: 100px;
+  margin-bottom: 180px;
+}
+
+/* line 356, ../sass/screen.scss */
+.contacts_wrap {
+  display: block;
+  position: relative;
+  width: 1170px;
+  margin: 0 auto;
+  height: 335px;
+  margin-bottom: 95px;
+}
+
+/* line 364, ../sass/screen.scss */
+.contacts_get_in_touch {
+  width: 430px;
+  float: left;
+}
+/* line 367, ../sass/screen.scss */
+.contacts_get_in_touch h3 {
+  color: #fff;
+  font-size: 17pt;
+}
+/* line 371, ../sass/screen.scss */
+.contacts_get_in_touch .contacts_info {
+  position: relative;
+  font-size: 10pt;
+  top: 15px;
+  line-height: 22px;
+}
+
+/* line 378, ../sass/screen.scss */
+.social_buttons {
+  position: relative;
+  display: block;
+  float: left;
+  top: 40px;
+}
+/* line 383, ../sass/screen.scss */
+.social_buttons li {
+  float: left;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+/* line 389, ../sass/screen.scss */
+.social_buttons li:nth-child(1) {
+  background-color: #23589A;
+}
+/* line 391, ../sass/screen.scss */
+.social_buttons li:nth-child(1):hover {
+  background-color: #203D9D;
+}
+/* line 396, ../sass/screen.scss */
+.social_buttons li:nth-child(2) {
+  background-color: #00C3F5;
+  left: 14px;
+}
+/* line 399, ../sass/screen.scss */
+.social_buttons li:nth-child(2):hover {
+  background-color: #01ABF3;
+}
+/* line 403, ../sass/screen.scss */
+.social_buttons li:nth-child(3) {
+  background-color: #FF4B3E;
+  left: 28px;
+}
+/* line 406, ../sass/screen.scss */
+.social_buttons li:nth-child(3):hover {
+  background-color: #D01C20;
+}
+/* line 410, ../sass/screen.scss */
+.social_buttons li a {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: none;
+  position: relative;
+  outline: none;
+  font-size: 20px;
+  color: #fff;
+  top: 10px;
+  left: 7px;
+}
+
+/* line 425, ../sass/screen.scss */
+.posted {
+  position: relative;
+  float: left;
+  color: #bface2;
+  top: 100px;
+  font-size: 14px;
+  left: -116px;
+  line-height: 25px;
+}
+
+/* line 434, ../sass/screen.scss */
+.contact_forms {
+  float: right;
+  width: 570px;
+}
+/* line 437, ../sass/screen.scss */
+.contact_forms form {
+  font-family: 'Open Sans', sans-serif;
+}
+/* line 439, ../sass/screen.scss */
+.contact_forms form input[type="text"], .contact_forms form input[type="email"] {
+  position: relative;
+  border-radius: 6px;
+  font-size: 19px;
+  color: #c1c1c1;
+  padding-left: 15px;
+  overflow: hidden;
+}
+/* line 446, ../sass/screen.scss */
+.contact_forms form input[type="text"]:nth-child(1), .contact_forms form input[type="text"]:nth-child(2), .contact_forms form input[type="email"]:nth-child(1), .contact_forms form input[type="email"]:nth-child(2) {
+  width: 270px;
+  height: 45px;
+}
+/* line 450, ../sass/screen.scss */
+.contact_forms form input[type="text"]:nth-child(2), .contact_forms form input[type="email"]:nth-child(2) {
+  left: 25px;
+}
+/* line 454, ../sass/screen.scss */
+.contact_forms form textarea {
+  position: relative;
+  font-family: 'Open Sans', sans-serif;
+  width: 570px;
+  height: 180px;
+  top: 30px;
+  border-radius: 6px;
+  font-size: 19px;
+  color: #c1c1c1;
+  padding-left: 15px;
+  overflow: hidden;
+  padding-top: 20px;
+  resize: none;
+}
+
+/* line 471, ../sass/screen.scss */
+.send {
+  position: relative;
+  float: right;
+  width: 170px;
+  height: 50px;
+  margin: 13px auto;
+  background-color: #44c0c2;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 20px;
+  font-family: 'Open Sans', sans-serif;
+  border: none;
+  cursor: pointer;
+  top: 45px;
+}
+
+/* line 487, ../sass/screen.scss */
+#name:focus {
+  border: none;
+  outline: none;
+}

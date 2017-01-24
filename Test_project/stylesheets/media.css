@@ -1,0 +1,450 @@
+@media only screen and (max-width : 1400px) {
+    footer {
+    	background-size: 150%;
+    }
+}
+@media only screen and (max-width : 1200px) {
+	.team_members {
+		width: 600px;
+	}
+	.team_members_member {
+		height: 450px;
+	}
+	.team h2 {
+		top: 10px;
+		margin-bottom: 40px;
+	}
+	.member_info {
+		top: 35px;
+	}
+	.subscriptions_wrap {
+		width: 960px;
+	}
+	.subscription li {
+		width: 300px;
+	}
+	 .contacts_wrap {
+    	width: 1010px;
+    } 
+}
+@media only screen and (max-width : 1160px) {
+    .contacts_wrap {
+    	width: 1010px;
+    } 
+}
+@media only screen and (max-width : 1160px) {
+    #logo {
+    	left: 80px;
+    }
+    #wrap-menu {
+    	right: 40px;
+    }
+    .main-heading {
+    	font-size: 50px;
+    }
+    .info p {
+    	font-size: 17px;
+    }
+    footer {
+    	background-size: 180%;
+    }
+}
+
+
+@media only screen and (max-width : 1035px) {
+    #logo {
+    	left: 25px;
+    }
+    #wrap-menu {
+    	right: 0px;
+    }
+    footer {
+    	background-size: 180%;
+    }
+    footer h2 {
+    	font-size: 30pt;
+    	top: 50px;
+    	margin-bottom: 95px; 
+    }
+    .contacts_wrap {
+    	margin-bottom: 80px;
+    	width: 880px;
+    }
+    .contact_forms {
+    	width: 450px;
+    }
+    .contact_forms form textarea {
+    	width: 450px;
+    }
+    .contact_forms form input[type="text"]:nth-child(1), .contact_forms form input[type="text"]:nth-child(2), .contact_forms form input[type="email"]:nth-child(1), .contact_forms form input[type="email"]:nth-child(2) {
+    	width: 210px;
+    }
+    .contacts_get_in_touch {
+    	width: 300px;
+    }
+    .posted {
+    	left: 0px;
+    	top: 60px;
+    }
+}
+@media only screen and (max-width : 980px) {
+    .subscriptions_wrap {
+    	width: 630px;
+    }
+    .subscription:nth-child(3) {
+    	top: 30px;
+    	left: 165px;
+    }
+}
+@media only screen and (max-width : 940px) {
+    #wrap-menu li a {
+    	font-size: 12pt;
+    }
+    .review-item {
+    	height: 460px;
+    	max-height: 460px;
+    	min-height: 460px;
+    }
+    .info {
+    	top: 100px;
+    }
+    .team_members {
+    	width: 600px;
+    }
+    .team_members_member:nth-child(4) {
+       left: 0px;
+	}
+}
+@media only screen and (max-width : 900px) {
+    .contacts_wrap {
+    	width: 450px;
+    }
+    .contact_forms {
+    	position: relative;
+    	top: -220px;
+    	width: 450px;
+    }
+    .contacts_get_in_touch {
+    	position: relative;
+    	width: 300px;
+    	top: 376px;
+    	float: none;
+    }
+    .posted {
+    	padding-bottom: 20px;
+    }
+    footer {
+    	background-size: 240%;
+    }
+    .contacts_wrap {
+    	height: 580px;
+    }
+}
+@media only screen and (max-width : 870px) {
+    #wrap-menu li a {
+    	font-size: 11pt;
+    }
+    #wrap-menu li {
+    	padding: 40px 15px;
+    }
+    .learn-more {
+    	font-size: 18px;
+    }
+    footer {
+    	background-size: 200%;
+    }
+}
+
+@media only screen and (max-width : 800px) {
+    .info p {
+    	font-size: 14px;
+    	line-height: 23px;
+    	height: 70px;
+    }
+    .review-item {
+    	max-height: 425px;
+    	min-height: 425px;
+    }
+    .owl-nav div {
+    	bottom: 250px;
+    }
+    footer {
+    	background-size: 200%;
+    }
+}
+@media only screen and (max-width : 780px) {
+    #logo {
+    	font-size: 30pt;
+    	top: 16px;
+    }
+     #wrap-menu li {
+    	padding: 30px 15px;
+    }
+    .subscriptions_wrap {
+    	top: 60px;
+    }
+    .subscriptions {
+    	padding-bottom: 130px;
+    }
+    .subscription li {
+    	font-size: 11pt;
+    	padding-top: 10px;
+    	padding-bottom: 10px;
+    }
+    .subscription li:nth-child(1) {
+    	font-size: 16px;
+    }
+    .subscription li:nth-child(2) {
+    	font-size: 12pt;
+    }
+    .subscription input {
+    	margin: 4px auto;
+    }
+}
+@media only screen and (max-width : 700px) {
+    #logo {
+    	left: auto;
+    	display: block;
+    	float: none;
+    	text-align: center;
+    }
+    #wrap-menu {
+    	float: none;
+    	margin: 0 auto;
+    	display: block;
+    	position: relative;
+    	overflow: hidden;
+    	top: 22px;
+    	margin-bottom: 22px;
+    	left: 15%;
+    }
+    #wrap-menu li {
+    	padding: 25px 15px;
+    }
+
+    #top-menu {
+    	right: auto;
+    	margin: 0;
+    	padding: 0;
+    	left:50%;
+        float:left;
+    }
+    .main-heading {
+    	font-size: 35px;
+    }
+    footer {
+    	background-size: 240%;
+    }
+}
+@media only screen and (max-width : 660px) {
+    .subscriptions_wrap {
+    	width: 370px;
+    	top: 40px;
+    }
+    .subscription:nth-child(2) {
+    	left: 0px;
+    	top: 30px;
+    }
+    .subscription:nth-child(3) {
+    	left: 0px;
+    	top: 60px;
+    }
+    .subscription li {
+    	width: 370px;
+    }
+    footer {
+    	background-size: 240%;
+    }
+
+}
+
+@media only screen and (max-width : 594px) {
+	.team_members {
+		width: 300px;
+		top: 0px;
+	}
+	.team h2 {
+		top: 0px;
+		font-size: 30pt;
+	}
+}
+@media only screen and (max-width : 560px) {
+    #wrap-menu {
+    	left: 7%;
+    }
+    .main-heading {
+    	font-size: 26px;
+    }
+    .info {
+    	top: 90px;
+    }
+    .info p {
+    	font-size: 12px;
+    	line-height: 19px;
+    	height: 43px;
+    	top: 20px;
+    }
+    .owl-prev {
+    	left: 10px;
+    }
+    .owl-next {
+    	right: 10px;
+    }
+    .owl-nav div {
+    	bottom: 200px;
+    }
+    .learn-more {
+    	font-size: 12px;
+    	padding: 14px 22px;
+    	top: 45px;
+    }
+    .review-item {
+    	max-height: 330px;
+    	min-height: 330px;
+    }
+    .team h2 {
+    	font-size: 25pt;
+    	margin-bottom: 30px;
+    }
+    .team_members_member {
+    	height: 370px;
+    }
+    .team_members_member_photo {
+    	width: 150px;
+    	height: 150px;
+    }
+    .team_members_member_photo span {
+    	top: 28px;
+    }
+    .member_info {
+    	top: 20px;
+    }
+}
+@media only screen and (max-width : 490px) {
+    #wrap-menu {
+    	left: 3%;
+    }
+}
+@media only screen and (max-width : 490px) {
+    #wrap-menu li a {
+    	font-size: 10pt;
+    }
+    #wrap-menu li {
+    	padding: 15px 8px;
+    }
+    #wrap-menu {
+    	left: 10%;
+    }
+    .info p {
+    	width: 245px;
+    }
+    .owl-nav div {
+    	width: 45px;
+    	height: 45px;
+    	background-position: -5px -4px;
+    }
+    .contact_forms form input[type="text"]:nth-child(1), .contact_forms form input[type="text"]:nth-child(2), .contact_forms form input[type="email"]:nth-child(1), .contact_forms form input[type="email"]:nth-child(2) {
+    	width: 100%;
+    }
+    #name {
+
+    }
+    .email {
+    	left: 0px;
+    }
+    .contact_forms form input[type="text"]:nth-child(2), .contact_forms form input[type="email"]:nth-child(2) {
+    left: 0px;
+    top: 10px;
+   }
+   .contacts_get_in_touch {
+   	top: 415px;
+   }
+   .contacts_wrap {
+   	height: 580px;
+   }
+}
+@media only screen and (max-width : 470px) {
+   .contacts_wrap {
+   	width: 80%;
+   } 
+   .contact_forms {
+   	width: 100%;
+   }
+   .contact_forms form textarea {
+   	width: 100%;
+   }
+   .contacts_get_in_touch h3 {
+   	font-size: 14pt;
+   }
+   .contacts_get_in_touch .contacts_info {
+   	font-size: 9pt;
+   	line-height: 16px;
+   }
+}
+@media only screen and (max-width : 455px) {
+    .learn-more {
+    	top: 35px;
+    }
+    .review-item {
+    	max-height: 270px;
+    	min-height: 270px;
+    }
+    .info {
+    	top: 60px;
+    }
+    .owl-nav div {
+    	bottom: 170px;
+    }
+    .subscriptions_wrap {
+    	width: 300px;
+    }
+    .subscription li {
+    	width: 300px;
+    }
+}
+
+@media only screen and (max-width : 380px) {
+	#wrap-menu {
+    	left: 4%;
+    }
+    #wrap-menu li a {
+    	font-size: 8pt;
+    }
+    .team h2 {
+    	font-size: 20pt;
+    	margin-bottom: 0px;
+    }
+    .team_members {
+    	top: 30px;
+    }
+    .team_members_member {
+    	height: 290px;
+    }
+    .team_members_member_photo {
+    	width: 110px;
+    	height: 110px;
+    }
+    .member_position {
+    	top: 8px;
+    }
+    .member_duties {
+    	font-size: 12px;
+    	top: 20px;
+    }
+    .team_members_member_photo span {
+    	top: 20px;
+    	font-size: 62px;
+    }
+    .member_info {
+    	top: 20px;
+    }
+}
+@media only screen and (max-width : 345px) {
+	.info p {
+    	width: 216px;
+    }
+    .main-heading {
+    	font-size: 20px;
+    }
+}
+
