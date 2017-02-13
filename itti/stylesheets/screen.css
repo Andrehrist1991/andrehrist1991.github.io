@@ -1,0 +1,742 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 5, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+@font-face {
+  font-family: "IstokWeb-Regular";
+  src: local("IstokWeb-Regular"), url("../fonts/IstokWeb-Regular.ttf");
+  font-style: normal;
+}
+@font-face {
+  font-family: "IstokWeb-Bold";
+  src: local("IstokWeb-Bold"), url("../fonts/IstokWeb-Bold.ttf");
+  font-style: normal;
+}
+@font-face {
+  font-family: "RussoOne-Regular";
+  src: local("RussoOne-Regular"), url("../fonts/RussoOne-Regular.ttf");
+  font-style: normal;
+}
+/* line 78, ../sass/screen.scss */
+header {
+  width: 100%;
+  background-color: #00022C;
+  position: relative;
+}
+
+/* line 83, ../sass/screen.scss */
+.top_line {
+  color: #fff;
+  width: 1140px;
+  position: relative;
+  margin: 0 auto;
+}
+
+/* line 89, ../sass/screen.scss */
+.top_menu {
+  padding-top: 20px;
+  padding-bottom: 33px;
+  position: relative;
+}
+/* line 93, ../sass/screen.scss */
+.top_menu li {
+  position: relative;
+  float: left;
+  margin-right: 50px;
+}
+/* line 45, ../sass/screen.scss */
+.top_menu li a {
+  color: #fff;
+}
+/* line 47, ../sass/screen.scss */
+.top_menu li a:visited {
+  color: #fff;
+}
+/* line 50, ../sass/screen.scss */
+.top_menu li a:hover {
+  color: #00A1A9;
+  text-decoration: none;
+}
+/* line 54, ../sass/screen.scss */
+.top_menu li a:active {
+  color: #00A1A9;
+}
+/* line 98, ../sass/screen.scss */
+.top_menu li:nth-child(1), .top_menu li:nth-child(4) {
+  margin-right: 75px;
+}
+/* line 101, ../sass/screen.scss */
+.top_menu li:last-child {
+  float: right;
+  margin-right: 0px;
+}
+/* line 105, ../sass/screen.scss */
+.top_menu li a {
+  font-family: "IstokWeb-Regular";
+  font-size: 14px;
+  text-decoration: none;
+}
+/* line 108, ../sass/screen.scss */
+.top_menu li a:hover {
+  transition: all 0.1s ease 0s;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -ms-transition: all 0.3s ease 0s;
+  -webkit-box-shadow: 0px 3px 0px 0px #00a1a9;
+  -moz-box-shadow: 0px 3px 0px 0px #00a1a9;
+  box-shadow: 0px 3px 0px 0px #00a1a9;
+}
+
+/* line 115, ../sass/screen.scss */
+.logo_search_wrapper {
+  position: absolute;
+  width: 1140px;
+  height: 160px;
+  margin: 0 auto;
+  z-index: 300;
+  left: 50%;
+  margin-left: -570px;
+  margin-top: 50px;
+}
+
+/* line 125, ../sass/screen.scss */
+.logo {
+  position: relative;
+  float: left;
+  background: url(../img/logo.png) no-repeat 0 0;
+  width: 190px;
+  height: 155px;
+  background-size: cover;
+}
+
+/* line 133, ../sass/screen.scss */
+.search {
+  width: 390px;
+}
+/* line 135, ../sass/screen.scss */
+.search button {
+  background-color: #00A1A9;
+}
+
+/* line 139, ../sass/screen.scss */
+.forms_wrap {
+  position: relative;
+}
+
+/* line 142, ../sass/screen.scss */
+.registry_buttons, .search_form {
+  position: relative;
+  float: left;
+  top: 55px;
+}
+
+/* line 147, ../sass/screen.scss */
+.registry_enter {
+  display: inline-block;
+  position: relative;
+  float: left;
+  padding: 14px 45px;
+  color: #00A1A9;
+  border: 2px solid #fff;
+  font-family: "IstokWeb-Regular";
+  font-size: 18px;
+  background-color: rgba(255, 255, 255, 0.01);
+  text-align: center;
+  outline: none;
+  border-radius: 5px;
+  text-decoration: none;
+  -webkit-box-shadow: inset 0px 0px 2px 2px #00a1a9;
+  -moz-box-shadow: inset 0px 0px 2px 2px #00a1a9;
+  box-shadow: inset 0px 0px 2px 2px #00a1a9;
+  transition: background-color 0.2s ease-out, border-color 0.2s ease-out;
+}
+/* line 165, ../sass/screen.scss */
+.registry_enter:nth-child(2) {
+  left: 30px;
+}
+
+/* line 169, ../sass/screen.scss */
+.registry_enter:hover,
+.registry_enter:active {
+  background-color: #00a1a9;
+  border-color: #00A1A9;
+  /* fallback */
+  color: #fff;
+  transition: background-color 0.3s ease-in, border-color 0.3s ease-in;
+}
+
+/* line 177, ../sass/screen.scss */
+main {
+  position: relative;
+  margin: 0 auto;
+  top: 70px;
+}
+
+/* line 182, ../sass/screen.scss */
+.news_parts {
+  position: relative;
+}
+/* line 45, ../sass/screen.scss */
+.news_parts a {
+  color: #000;
+}
+/* line 47, ../sass/screen.scss */
+.news_parts a:visited {
+  color: #000;
+}
+/* line 50, ../sass/screen.scss */
+.news_parts a:hover {
+  color: #00A1A9;
+  text-decoration: none;
+}
+/* line 54, ../sass/screen.scss */
+.news_parts a:active {
+  color: #00A1A9;
+}
+/* line 185, ../sass/screen.scss */
+.news_parts a {
+  float: left;
+  margin-right: 30px;
+  font-family: "IstokWeb-Bold";
+  font-size: 20px;
+}
+/* line 189, ../sass/screen.scss */
+.news_parts a:hover {
+  transition: all 0.1s ease 0s;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -ms-transition: all 0.3s ease 0s;
+  -webkit-box-shadow: 0px 3px 0px 0px #00a1a9;
+  -moz-box-shadow: 0px 3px 0px 0px #00a1a9;
+  box-shadow: 0px 3px 0px 0px #00a1a9;
+}
+
+/* line 195, ../sass/screen.scss */
+.post {
+  position: relative;
+  top: 60px;
+  border-bottom: 1px solid black;
+  margin-bottom: 20px;
+}
+/* line 200, ../sass/screen.scss */
+.post img {
+  position: relative;
+  top: 10px;
+  max-height: 200px;
+  left: 20px;
+}
+/* line 206, ../sass/screen.scss */
+.post h3 {
+  float: left;
+  position: relative;
+  top: 15px;
+  left: -15px;
+}
+/* line 45, ../sass/screen.scss */
+.post h3 a {
+  color: #00022C;
+}
+/* line 47, ../sass/screen.scss */
+.post h3 a:visited {
+  color: #00022C;
+}
+/* line 50, ../sass/screen.scss */
+.post h3 a:hover {
+  color: #00A1A9;
+  text-decoration: none;
+}
+/* line 54, ../sass/screen.scss */
+.post h3 a:active {
+  color: #00A1A9;
+}
+/* line 212, ../sass/screen.scss */
+.post h3 a {
+  text-decoration: none;
+  font-family: "RussoOne-Regular";
+  font-size: 24px;
+  transition: all 0.1s ease 0s;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -ms-transition: all 0.3s ease 0s;
+}
+
+/* line 219, ../sass/screen.scss */
+.last_post {
+  border: none;
+}
+
+/* line 222, ../sass/screen.scss */
+.count-likes {
+  font-family: "IstokWeb-Bold";
+  font-size: 16px;
+  width: 30px;
+  color: #626161;
+  padding: 0px 0px;
+  float: left;
+}
+/* line 228, ../sass/screen.scss */
+.count-likes:hover {
+  color: #00A1A9;
+  text-decoration: none;
+  transition: all 0.1s ease 0s;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -ms-transition: all 0.3s ease 0s;
+}
+
+/* line 233, ../sass/screen.scss */
+.post_info {
+  left: -20px;
+  padding-bottom: 97px;
+}
+/* line 236, ../sass/screen.scss */
+.post_info span {
+  position: absolute;
+  font-family: "IstokWeb-Regular";
+  font-size: 12px;
+  float: left;
+  top: 55px;
+  left: 0px;
+  color: #626161;
+  cursor: default;
+}
+
+/* line 246, ../sass/screen.scss */
+.post_text {
+  top: 50px;
+  position: relative;
+  width: 100%;
+  left: 0px;
+  max-height: 93px;
+  line-height: 1.3;
+  font-family: "IstokWeb-Regular";
+  font-size: 12px;
+  overflow: hidden;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -moz-text-overflow: ellipsis;
+}
+
+/* line 259, ../sass/screen.scss */
+.views_comments_read {
+  top: 65px;
+  left: -29px;
+}
+
+/* line 263, ../sass/screen.scss */
+.views, .comments {
+  font-family: "IstokWeb-Regular";
+  font-size: 12px;
+  color: #626161;
+  float: left;
+  letter-spacing: -1px;
+}
+/* line 268, ../sass/screen.scss */
+.views:hover, .comments:hover {
+  color: #00A1A9;
+  text-decoration: none;
+  transition: all 0.1s ease 0s;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -ms-transition: all 0.3s ease 0s;
+}
+
+/* line 276, ../sass/screen.scss */
+.read {
+  font-family: "IstokWeb-Regular";
+  font-size: 14px;
+  color: #000;
+  right: -30px;
+  padding: 1px 27px;
+  border: 1px solid #00A1A9;
+  background-color: #fff;
+}
+/* line 283, ../sass/screen.scss */
+.read:hover {
+  transition: all 0.1s ease 0s;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -ms-transition: all 0.3s ease 0s;
+  color: #fff;
+  background-color: #00A1A9;
+}
+
+/* line 289, ../sass/screen.scss */
+.paginator {
+  border-bottom: 1px solid #000;
+  top: 20px;
+}
+
+/* line 295, ../sass/screen.scss */
+.pagination li:first-child {
+  display: none;
+}
+/* line 298, ../sass/screen.scss */
+.pagination li i {
+  font-size: 16px;
+}
+/* line 301, ../sass/screen.scss */
+.pagination li a {
+  color: #000;
+  border: none;
+  font-size: 25px;
+  margin-right: 18px;
+  padding: 0px 4px;
+}
+/* line 307, ../sass/screen.scss */
+.pagination li a:hover {
+  transition: all 0.1s ease 0s;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -ms-transition: all 0.3s ease 0s;
+  color: #00A1A9;
+  text-decoration: none;
+  background-color: #fff;
+}
+
+/* line 315, ../sass/screen.scss */
+.pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus {
+  background-color: #fff;
+  color: #00A1A9;
+  border-bottom: 2px solid #00A1A9;
+}
+
+/* line 320, ../sass/screen.scss */
+.advertising {
+  position: relative;
+  float: left;
+  display: inline-block;
+  font-family: "IstokWeb-Regular";
+  font-size: 24px;
+  background-color: #383838;
+  height: 260px;
+  max-height: 260px;
+  text-align: center;
+  color: #000;
+  padding-top: 40%;
+  margin-bottom: 25px;
+}
+
+/* line 333, ../sass/screen.scss */
+.side_info {
+  position: relative;
+  display: inline-block;
+  float: left;
+  background-color: #F4F2F2;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 25px;
+}
+/* line 341, ../sass/screen.scss */
+.side_info h3 {
+  font-family: "IstokWeb-Regular";
+  font-size: 24px;
+  padding-top: 20px;
+}
+/* line 345, ../sass/screen.scss */
+.side_info li {
+  font-family: "IstokWeb-Regular";
+  font-size: 18px;
+  margin-left: 3px;
+  padding-top: 25px;
+}
+/* line 45, ../sass/screen.scss */
+.side_info li a {
+  color: #000;
+}
+/* line 47, ../sass/screen.scss */
+.side_info li a:visited {
+  color: #000;
+}
+/* line 50, ../sass/screen.scss */
+.side_info li a:hover {
+  color: #00A1A9;
+  text-decoration: none;
+}
+/* line 54, ../sass/screen.scss */
+.side_info li a:active {
+  color: #00A1A9;
+}
+/* line 350, ../sass/screen.scss */
+.side_info li:last-child {
+  padding-bottom: 25px;
+}
+
+/* line 355, ../sass/screen.scss */
+.divider {
+  position: relative;
+  margin: 0 auto;
+  width: 200%;
+  left: -50px;
+  background-color: #000;
+  height: 1px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+/* line 366, ../sass/screen.scss */
+.events li {
+  line-height: 12px;
+}
+/* line 369, ../sass/screen.scss */
+.events span {
+  font-size: 10px;
+}
+/* line 372, ../sass/screen.scss */
+.events a {
+  width: 84%;
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  display: block;
+  text-overflow: ellipsis;
+}
+
+/* line 381, ../sass/screen.scss */
+.recomendations {
+  top: 50px;
+}
+/* line 383, ../sass/screen.scss */
+.recomendations h3 {
+  position: relative;
+  font-family: "IstokWeb-Bold";
+  font-size: 24px;
+  color: #000;
+}
+/* line 388, ../sass/screen.scss */
+.recomendations ul {
+  top: 25px;
+}
+/* line 391, ../sass/screen.scss */
+.recomendations li {
+  font-family: "IstokWeb-Bold";
+  font-size: 24px;
+  margin-top: 15px;
+}
+/* line 45, ../sass/screen.scss */
+.recomendations li a {
+  color: #00031F;
+}
+/* line 47, ../sass/screen.scss */
+.recomendations li a:visited {
+  color: #00031F;
+}
+/* line 50, ../sass/screen.scss */
+.recomendations li a:hover {
+  color: #00A1A9;
+  text-decoration: none;
+}
+/* line 54, ../sass/screen.scss */
+.recomendations li a:active {
+  color: #00A1A9;
+}
+/* line 397, ../sass/screen.scss */
+.recomendations li i:first-child i {
+  color: #fff;
+  position: absolute;
+  left: 3px;
+  top: 1px;
+  font-size: 18px;
+}
+/* line 406, ../sass/screen.scss */
+.recomendations li:before {
+  display: block;
+  position: relative;
+  float: left;
+  content: url("../img/bookmark.png");
+  width: 18px;
+  height: 21px;
+}
+/* line 414, ../sass/screen.scss */
+.recomendations li:hover:before {
+  content: url("../img/bookmark_hover.png");
+}
+
+/* line 419, ../sass/screen.scss */
+.book {
+  top: 6px;
+}
+
+/* line 422, ../sass/screen.scss */
+.recomendation_info {
+  position: relative;
+  cursor: default;
+  left: 42px;
+  font-family: "IstokWeb-Regular";
+  font-size: 12px;
+  letter-spacing: -1px;
+  color: #626161;
+}
+/* line 430, ../sass/screen.scss */
+.recomendation_info i:nth-child(2), .recomendation_info i:nth-child(3) {
+  padding-left: 18px;
+}
+
+/* line 435, ../sass/screen.scss */
+footer {
+  position: relative;
+  border-top: 1px solid #000;
+  top: 155px;
+}
+
+/* line 440, ../sass/screen.scss */
+.info_wrapper {
+  position: relative;
+  top: 35px;
+}
+/* line 443, ../sass/screen.scss */
+.info_wrapper h3 {
+  font-family: "IstokWeb-Regular";
+  font-size: 24px;
+  color: #00A1A9;
+}
+
+/* line 448, ../sass/screen.scss */
+.registry_footer {
+  margin-top: 40px;
+}
+/* line 450, ../sass/screen.scss */
+.registry_footer li {
+  font-family: "IstokWeb-Regular";
+  font-size: 24px;
+  margin-bottom: 22px;
+}
+/* line 45, ../sass/screen.scss */
+.registry_footer li a {
+  color: #00031F;
+}
+/* line 47, ../sass/screen.scss */
+.registry_footer li a:visited {
+  color: #00031F;
+}
+/* line 50, ../sass/screen.scss */
+.registry_footer li a:hover {
+  color: #00A1A9;
+  text-decoration: none;
+}
+/* line 54, ../sass/screen.scss */
+.registry_footer li a:active {
+  color: #00A1A9;
+}
+
+/* line 456, ../sass/screen.scss */
+.footer_info {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+/* line 459, ../sass/screen.scss */
+.footer_info li {
+  font-family: "IstokWeb-Regular";
+  font-size: 14px;
+  transition: all 0.1s ease 0s;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -ms-transition: all 0.3s ease 0s;
+  color: #00A1A9;
+  text-decoration: none;
+  margin-top: 20px;
+}
+/* line 45, ../sass/screen.scss */
+.footer_info li a {
+  color: #00031F;
+}
+/* line 47, ../sass/screen.scss */
+.footer_info li a:visited {
+  color: #00031F;
+}
+/* line 50, ../sass/screen.scss */
+.footer_info li a:hover {
+  color: #00A1A9;
+  text-decoration: none;
+}
+/* line 54, ../sass/screen.scss */
+.footer_info li a:active {
+  color: #00A1A9;
+}
+/* line 465, ../sass/screen.scss */
+.footer_info li:hover {
+  text-decoration: underline;
+}
+
+/* line 470, ../sass/screen.scss */
+.social_buttons {
+  margin-top: 40px;
+}
+/* line 472, ../sass/screen.scss */
+.social_buttons li {
+  float: left;
+  margin-left: 25px;
+}
+/* line 475, ../sass/screen.scss */
+.social_buttons li i {
+  color: #00031F;
+}
+/* line 477, ../sass/screen.scss */
+.social_buttons li i:hover {
+  color: #00A1A9;
+}

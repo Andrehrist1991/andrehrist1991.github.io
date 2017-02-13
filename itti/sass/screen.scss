@@ -1,0 +1,482 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+
+@mixin png($img, $type: png) {
+	background: url(../img/#{$img}.png) no-repeat 0 0;
+}
+@mixin jpg($img, $type: jpg) {
+	background: url(../img/#{$img}.jpg) no-repeat 0 0;
+}
+@font-face {
+	   font-family: "IstokWeb-Regular";
+	    src: local("IstokWeb-Regular"),
+	         url("../fonts/IstokWeb-Regular.ttf");
+	    font-style: normal;
+}
+@font-face {
+	   font-family: "IstokWeb-Bold";
+	    src: local("IstokWeb-Bold"),
+	         url("../fonts/IstokWeb-Bold.ttf");
+	    font-style: normal;
+}
+@font-face {
+	   font-family: "RussoOne-Regular";
+	    src: local("RussoOne-Regular"),
+	         url("../fonts/RussoOne-Regular.ttf");
+	    font-style: normal;
+}
+@mixin regular ($fsize) {
+    font-family: "IstokWeb-Regular";
+    font-size: $fsize;
+}
+@mixin bold ($fsize) {
+    font-family: "IstokWeb-Bold";
+    font-size: $fsize;
+}
+@mixin russoone ($fsize) {
+    font-family: "RussoOne-Regular";
+    font-size: $fsize;
+}
+@mixin links ($link, $visit, $hover, $active){
+     a {
+     	color: $link;
+     	&:visited {
+     		color: $visit;
+     	}
+     	&:hover {
+     		color: $hover;
+     		text-decoration: none;
+     	}
+        &:active {
+     		color: $active;
+     	}
+     }
+}
+@mixin trans {
+	transition: all 0.1s ease 0s;
+    -webkit-transition: all 0.3s ease 0s;
+  	-moz-transition: all 0.3s ease 0s;
+  	-ms-transition: all 0.3s ease 0s;
+}
+@mixin hover {
+	color: $blue;
+    text-decoration: none;
+}
+@mixin border {
+    -webkit-box-shadow: 0px 3px 0px 0px rgba(0,161,169,1);
+    -moz-box-shadow: 0px 3px 0px 0px rgba(0,161,169,1);
+    box-shadow: 0px 3px 0px 0px rgba(0,161,169,1);
+}
+
+$blue: #00A1A9;
+$gray: #626161;
+
+header {
+	width: 100%;
+	background-color: #00022C;
+	position: relative;
+}
+.top_line {
+	color: #fff;
+	width: 1140px;
+	position: relative;
+	margin: 0 auto;
+}
+.top_menu {
+	padding-top: 20px;
+    padding-bottom: 33px;
+    position: relative;
+	li {
+		position: relative;
+		float: left;
+		margin-right: 50px;
+		@include links(#fff, #fff, $blue, $blue);
+		&:nth-child(1), &:nth-child(4) {
+            margin-right: 75px;
+		}
+		&:last-child {
+			float: right;
+			margin-right: 0px;
+		}
+		a {
+          @include regular(14px);
+          text-decoration: none;
+          &:hover {
+          	@include trans;
+  		    @include border;
+          }
+		}
+	}
+}
+.logo_search_wrapper {
+	position: absolute;
+	width: 1140px;
+	height: 160px;
+	margin: 0 auto;
+	z-index: 300;
+	left: 50%;
+    margin-left: -570px;
+    margin-top: 50px;
+}
+.logo {
+	position: relative;
+	float: left;
+	@include png(logo);
+	width: 190px;
+	height: 155px;
+	background-size: cover;
+}
+.search {
+	width: 390px;
+	button {
+		background-color: $blue;
+	}
+}
+.forms_wrap {
+    position: relative;	
+}
+.registry_buttons, .search_form {
+	position: relative;
+	float: left;
+	top: 55px;
+}
+.registry_enter {
+  display: inline-block;
+  position: relative;
+  float: left;
+  padding: 14px 45px;
+  color: $blue;
+  border: 2px solid #fff;
+  @include regular(18px);
+  background-color: rgba(255, 255, 255, 0.01);
+  text-align: center;
+  outline: none;
+  border-radius: 5px;
+  text-decoration: none;
+  -webkit-box-shadow: inset 0px 0px 2px 2px rgba(0,161,169,1);
+-moz-box-shadow: inset 0px 0px 2px 2px rgba(0,161,169,1);
+box-shadow: inset 0px 0px 2px 2px rgba(0,161,169,1);
+  transition: background-color 0.2s ease-out,
+              border-color 0.2s ease-out;
+    &:nth-child(2) {
+    	left: 30px;
+    }          
+}
+.registry_enter:hover,
+.registry_enter:active {
+  background-color: rgba(0, 161, 169, 1);
+  border-color: $blue; /* fallback */
+  color: #fff;
+  transition: background-color 0.3s ease-in,
+              border-color 0.3s ease-in;
+}
+main {
+	position: relative;
+	margin: 0 auto;
+	top: 70px;
+}
+.news_parts {
+	position: relative;
+	@include links(#000, #000, $blue, $blue);
+	a {
+		float: left;
+		margin-right: 30px;
+		@include bold(20px);
+		&:hover { 
+            @include trans;
+            @include border;
+		}
+	}
+} 
+.post {
+	position: relative;
+	top: 60px;
+	border-bottom: 1px solid black;
+	margin-bottom: 20px;
+    img {
+    	position: relative;
+    	top: 10px;
+    	max-height: 200px;
+    	left: 20px;
+    }
+    h3 {
+    	float: left;
+    	position: relative;
+    	top: 15px;
+    	left: -15px;
+    	@include links(#00022C, #00022C, $blue, $blue);
+    	a {  
+    		text-decoration: none;
+    		@include russoone(24px);
+    		@include trans;
+    	} 
+    }
+}
+.last_post {
+	border: none;
+}
+.count-likes {
+	@include bold(16px);
+	width: 30px;
+	color: $gray;
+	padding: 0px 0px; 
+	float: left;
+	&:hover {
+		@include hover;
+		@include trans;
+	}
+}
+.post_info {
+	left: -20px;
+	padding-bottom: 97px;
+	span {
+		position: absolute;
+		@include regular(12px);
+		float: left;
+		top: 55px;
+		left: 0px;
+		color: $gray;
+		cursor: default;
+	}
+}
+.post_text {
+	top: 50px;
+	position: relative;
+	width: 100%;
+	left: 0px;
+	max-height: 93px;
+	line-height: 1.3;
+	@include regular(12px);
+	overflow: hidden;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	-moz-text-overflow: ellipsis;
+}
+.views_comments_read {
+	top: 65px;
+	left: -29px;
+}
+.views {
+	@include regular(12px);
+	color: $gray;
+	float: left;
+	letter-spacing: -1px;
+	&:hover {
+		@include hover;
+		@include trans;
+	}
+}
+.comments {
+	@extend .views;
+}
+.read {
+	@include regular(14px);
+	color: #000;
+	right: -30px;
+	padding: 1px 27px;
+	border: 1px solid $blue;
+	background-color: #fff;
+	&:hover {
+		@include trans;
+		color: #fff;
+		background-color: $blue;
+	}
+}
+.paginator {
+	border-bottom: 1px solid #000;
+	top: 20px;
+}
+.pagination{
+	li {
+		&:first-child {
+			display: none;
+		}
+		i {
+			font-size: 16px;
+		} 
+		a {
+		color: #000;	
+		border: none;
+		font-size: 25px;
+		margin-right: 18px;
+		padding: 0px 4px;
+		&:hover {
+		@include trans;
+		@include hover;				
+		background-color: #fff;
+	}
+	}
+	}
+}
+.pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus {
+	background-color: #fff;
+	color: $blue;
+	border-bottom: 2px solid $blue;
+}
+.advertising {
+	position: relative;
+	float: left;
+	display: inline-block;
+	@include regular(24px);
+	background-color: #383838;
+	height: 260px;
+	max-height: 260px;
+	text-align: center;
+	color: #000;
+	padding-top: 40%;
+	margin-bottom: 25px;
+}
+.side_info {
+	position: relative;
+	display: inline-block;
+	float: left;
+	background-color: #F4F2F2;
+	border-radius: 5px;
+	overflow: hidden;
+	margin-bottom: 25px;
+	h3 {
+		@include regular(24px);
+		padding-top: 20px;
+	}
+	li {
+		@include regular(18px);
+		@include links(#000, #000, $blue, $blue);
+		margin-left: 3px;
+		padding-top: 25px;
+		&:last-child {
+			padding-bottom: 25px;
+		}
+	}
+}
+.divider {
+	position: relative;
+	margin: 0 auto;
+	width: 200%;
+	left: -50px;
+	background-color: #000;
+	height: 1px;
+	padding-left: 0px;
+	padding-right: 0px;
+}
+.events {
+	li {
+	   line-height: 12px;
+	}
+	span {
+		font-size: 10px;
+	}
+	a {
+	width: 84%;
+    font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    display: block;
+    text-overflow: ellipsis;
+ }
+}
+.recomendations {
+	top: 50px;
+	h3 {
+	   position: relative;
+	   @include bold(24px);
+	   color: #000;
+	}
+	ul {
+		top: 25px;
+	}
+	li {
+		@include bold(24px);
+		@include links(#00031F, #00031F, $blue, $blue);
+		margin-top: 15px;
+		i {
+			&:first-child {
+				i {
+					color: #fff;
+					position: absolute;
+					left: 3px;
+					top: 1px;
+					font-size: 18px;
+				}
+			}			
+		}
+		&:before {
+			display: block;
+	        position: relative;
+	        float: left;
+	        content: url("../img/bookmark.png");
+	        width: 18px;
+	        height: 21px;
+		}
+		&:hover:before {
+			content: url("../img/bookmark_hover.png");
+		}
+	}
+}
+.book {
+	top: 6px;
+}
+.recomendation_info {
+	position: relative;
+	cursor: default;
+	left: 42px;
+	@include regular(12px);
+	letter-spacing: -1px;
+	color: $gray;
+	i {
+		&:nth-child(2), &:nth-child(3) { 
+		padding-left: 18px;
+	 }
+	}
+}
+footer {
+    position: relative;
+    border-top: 1px solid #000;
+    top: 155px;
+}
+.info_wrapper {
+    position: relative;
+    top: 35px;
+    h3 {
+    	@include regular(24px);
+    	color: $blue;
+    }
+}
+.registry_footer {
+	margin-top: 40px;
+    li {
+        @include regular(24px);
+        @include links(#00031F, #00031F, $blue, $blue);
+        margin-bottom: 22px;
+    }
+}
+.footer_info {
+	margin-top: 40px;
+	 margin-bottom: 40px;
+	li {
+		@include regular(14px);
+        @include trans;
+        @include hover;
+        @include links(#00031F, #00031F, $blue, $blue);
+        margin-top: 20px;
+        &:hover {
+            text-decoration: underline;
+        }
+	}
+}
+.social_buttons {
+	margin-top: 40px;
+	li {
+		float: left;
+		margin-left: 25px;
+		i {
+			color: #00031F;
+			&:hover {
+				color: $blue;
+			}
+		}
+	}
+}
