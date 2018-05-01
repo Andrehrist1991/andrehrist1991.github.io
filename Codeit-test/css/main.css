@@ -1219,7 +1219,7 @@ h1 {
 
 .a2a_kit a {
   float: left;
-  width: 14.28571%;
+  width: 14.45%;
   height: 45px;
   border: 1px solid #CCC;
   background-color: transparent;
@@ -1313,6 +1313,12 @@ h1 {
 @media only screen and (min-width: 992px) {
   .main-menu__toggle {
     display: none; } }
+
+@media only screen and (min-width: 768px) {
+  .-style-footerDescription {
+    padding-right: 0; }
+  .-style-footerSubscribe {
+    padding-left: 30px; } }
 
 @media only screen and (max-width: 1200px) {
   .b-header {
