@@ -601,6 +601,39 @@ a {
   -webkit-background-size: 20px 20px;
           background-size: 20px; }
 
+.b-popup {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5); }
+  .b-popup__content {
+    background-color: #fff;
+    -webkit-border-radius: 10px;
+            border-radius: 10px;
+    margin: 20% auto;
+    padding: 20px;
+    width: 70%;
+    position: relative;
+    -webkit-box-shadow: 0px 0px 5px 4px #f0f3f8;
+    box-shadow: 0px 0px 5px 4px #f0f3f8; }
+  .b-popup__close {
+    font-size: 28px;
+    position: absolute;
+    right: 10px;
+    top: 0px;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px; }
+    .b-popup__close:hover {
+      color: #fff; }
+
 .header {
   width: 100%;
   position: fixed;
@@ -634,9 +667,18 @@ a {
     -webkit-align-items: center;
         -ms-flex-align: center;
             align-items: center; }
+  .header.scrolling {
+    padding: 10px 0 15px;
+    -webkit-box-shadow: 0px 15px 21px 0px rgba(0, 0, 0, 0.3);
+            box-shadow: 0px 15px 21px 0px rgba(0, 0, 0, 0.3); }
+    .header.scrolling .logo__wrap img {
+      width: 140px; }
 
 .logo__wrap img {
-  width: 215px; }
+  width: 215px;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease; }
 
 .main-menu {
   font-family: 'Raleway', sans-serif;
@@ -929,11 +971,74 @@ a {
 .reviews-slider__wrap {
   max-width: 985px;
   width: 100%;
-  margin: 75px auto 0; }
+  margin: 75px auto 0;
+  position: relative; }
+  .reviews-slider__wrap .rev-conrtols {
+    right: -140px;
+    bottom: 105px; }
 
 .reviews-slider .swiper-slide {
   min-height: 480px;
   text-align: center; }
+
+.rev-conrtols {
+  position: absolute;
+  width: 104px;
+  height: 60px;
+  border: 1px solid #fff;
+  -webkit-box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  -webkit-border-radius: 3px;
+          border-radius: 3px; }
+  .rev-conrtols .swiper-button-prev,
+  .rev-conrtols .swiper-button-next {
+    width: 52px;
+    height: 60px;
+    top: 0;
+    outline: none !important;
+    margin-top: 0;
+    background: #66ae8a;
+    /* Old browsers */
+    background: -webkit-linear-gradient(#66ae8a 0%, #69ba98 60%, #57b19d 100%);
+    background: -o-linear-gradient(#66ae8a 0%, #69ba98 60%, #57b19d 100%);
+    background: -webkit-gradient(linear, left top, left bottom, from(#66ae8a), color-stop(60%, #69ba98), to(#57b19d));
+    background: linear-gradient(#66ae8a 0%, #69ba98 60%, #57b19d 100%);
+    /* FF3.6-15 */
+    /* Chrome10-25,Safari5.1-6 */
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#66ae8a', endColorstr='#57b19d',GradientType=0 );
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease; }
+    .rev-conrtols .swiper-button-prev:hover,
+    .rev-conrtols .swiper-button-next:hover {
+      -webkit-box-shadow: inset -31px 0px 68px 12px rgba(0, 0, 0, 0.5);
+              box-shadow: inset -31px 0px 68px 12px rgba(0, 0, 0, 0.5); }
+    .rev-conrtols .swiper-button-prev:before,
+    .rev-conrtols .swiper-button-next:before {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 22px;
+      height: 40px;
+      left: 50%;
+      top: 50%;
+      -webkit-transform: translateY(-50%) translateX(-50%);
+          -ms-transform: translateY(-50%) translateX(-50%);
+              transform: translateY(-50%) translateX(-50%);
+      background-repeat: no-repeat;
+      -webkit-background-size: cover;
+              background-size: cover;
+      background-position: center; }
+  .rev-conrtols .swiper-button-prev {
+    left: 0; }
+    .rev-conrtols .swiper-button-prev:before {
+      background-image: url("../img/arrow-left.png"); }
+  .rev-conrtols .swiper-button-next {
+    right: 0; }
+    .rev-conrtols .swiper-button-next:before {
+      background-image: url("../img/arrow-right.png"); }
 
 .review__itm {
   text-align: center;
@@ -944,7 +1049,15 @@ a {
     -webkit-border-radius: 15px;
             border-radius: 15px;
     -webkit-background-size: cover;
-            background-size: cover; }
+            background-size: cover;
+    border: 1px solid #fff; }
+    .review__itm .review__img.has-video {
+      position: relative;
+      cursor: pointer;
+      overflow: hidden; }
+      .review__itm .review__img.has-video iframe {
+        width: 100%;
+        height: 100%; }
   .review__itm .review__hdg, .review__itm .review__txt {
     display: block; }
   .review__itm .review__hdg {

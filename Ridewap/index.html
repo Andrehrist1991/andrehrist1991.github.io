@@ -183,8 +183,8 @@
 					      </div>
 					      <div class="swiper-slide">
 					      	<div class="review__itm">
-					      		<div class="review__img" style="background-image: url('./img/customers/customer.jpg');">
-					      			
+					      		<div class="review__img has-video js-video-popup" style="background-image: url('./img/customers/customer.jpg');">
+					      			<iframe src="https://www.youtube.com/embed/dVZlj2uboFg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 					      		</div>
 					      		<span class="review__hdg">Евгений Батькович</span>
 					      		<span class="review__txt">Это небольшое сочинение написано было Эразмом Роттердамским, — по его собственным словам, от Англию.</span>
@@ -227,7 +227,11 @@
 					      	</div>
 					      </div>
 					    </div>
-					    <div class="swiper-pagination"></div>
+					    <!-- <div class="swiper-pagination"></div> -->
+					</div>
+					<div class="slider-conrtols rev-conrtols">
+					    <div class="swiper-button-next rev-prev"></div>
+    					<div class="swiper-button-prev rev-next"></div>
 					</div>
 				</div>
 
@@ -239,6 +243,15 @@
 		</section>
 		
 	</div><!-- End page-wrapper -->
+
+	<!-- Popups -->
+	<div class="b-popup" id="video-popup">
+		<div class="b-popup__content">
+			<a href="#" class="b-popup__close js-popupClose">&times;</a>
+			<p class="b-popup__text"></p>
+		</div>
+	</div>
+	<!-- END Popups -->
 
 	<script src="js/libs.min.js"></script>
 	<script async src="https://static.addtoany.com/menu/page.js"></script>
