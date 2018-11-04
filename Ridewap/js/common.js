@@ -16,6 +16,10 @@ $(document).ready(function() {
       //   clickable: true,
       // },
     });
+
+    /*Wow-init*/
+    new WOW().init();
+    /*END Wow-init*/
 	
 	/*Scrolling header*/
 	$(window).scroll(function() {
@@ -27,23 +31,59 @@ $(document).ready(function() {
 	});
 	/*END Scrolling header*/
 
+	/*Active video*/
+	$(".js-video").on("click", function() {
+		var dataYoutube = $(this).attr("data-youtube");
+		$(this).addClass("active");
+		$(this).html('<iframe src="https://www.youtube.com/embed/'+ dataYoutube +'?autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
+	});
+
+	/*Parallax*/
+    if ( $(".js-parallax").length ) {
+        function parallax() {
+            var distanceTop = $(".js-parallax").offset().top;
+            var windowHeight = $(window).innerHeight();
+            $(window).scroll(function() {
+                var st = $(this).scrollTop();
+                if ($(window).width() > 768) {
+                    if ((st + windowHeight) > distanceTop) {
+                        $("body .js-parallax").css({
+                                "background-position": "50% " + st /5 + "px"
+                        });
+                    } else {
+                        $("body .js-parallax").css({
+                                "background-position": "50%"
+                        });
+                    };
+                }
+            }); 
+        };
+        parallax();
+        $(window).resize(function() {
+            parallax();
+        });
+    };
+    /*END Parallax*/
+
+	/*END Active video*/
+
 	/*Custom popup*/
-	$('body').on('click', '.js-video-popup', function(e) {
-		e.preventDefault();
-		$('.b-popup#video-popup').css("display", "block");
-		$("body").addClass('-overflow-active');
-	});
-	$(document).on('click', '.js-popupClose', function(e) {
-		e.preventDefault();
-		$(this).parents(".b-popup").css("display", "none");
-	});
-	$(document).on('click', function(e) {
-		var popupCallback = $(".b-popup#video-popup");
-		if( e.target == popupCallback[0] ) {
-			$(".b-popup#video-popup").css("display", "none");
-			$("body").removeClass('-overflow-active');
-		}
-	});
+	// $('body').on('click', '.js-video-popup', function(e) {
+	// 	e.preventDefault();
+	// 	$('.b-popup#video-popup').css("display", "block");
+	// 	$("body").addClass('-overflow-active');
+	// });
+	// $(document).on('click', '.js-popupClose', function(e) {
+	// 	e.preventDefault();
+	// 	$(this).parents(".b-popup").css("display", "none");
+	// });
+	// $(document).on('click', function(e) {
+	// 	var popupCallback = $(".b-popup#video-popup");
+	// 	if( e.target == popupCallback[0] ) {
+	// 		$(".b-popup#video-popup").css("display", "none");
+	// 		$("body").removeClass('-overflow-active');
+	// 	}
+	// });
 
 
 	/*Mobile menu*/
