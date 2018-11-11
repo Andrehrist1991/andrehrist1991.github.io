@@ -91,10 +91,10 @@
 							<p>Более 500 тысяч украинцев постоянно проживают на территории Польши. В чем особенности Польши? Почему большинство предпочитает именно Польшу для реализации своих задач и целей?</p>
 						</div>
 						<div class="btn-wrap text-right">
-							<a href="#" class="btn btn-more">Читать далее</a>
+							<a href="#" class="btn btn-more js-read-more">Читать далее</a>
 						</div>
 					</div>
-					<div class="descr-block">
+					<div class="descr-block js-descr-toggle turning-text">
 						<div class="descr-text">
 							<p><strong>Работа в Польше для украинцев</strong> – это в первую очередь <strong>условия труда европейского уровня</strong> и <strong>высокая заработная плата</strong>. Отделы кадров разных фабрик, предприятий и других организаций с радостью заключают трудовые договора с украинцами. Не удивительно, ведь украинцы зарекомендовали себя отличной комбинацией следующих качеств: ответственность, оперативность и дисциплина.</p>
 							<p>Этому так же способствует географическое расположение стран и схожесть языков. На практике, украинцы осваивают польский в течении 3-ех – 6-ти месяцев. А поскольку в соседней Польше уровень жизни значительно выше, это и привлекает украинцев.</p>
@@ -133,9 +133,15 @@
 						</div>
 					</div>
 					<div class="row">
-						<div class="col"></div>
 						<div class="col">
-							<div class="stages-itm document-stage wow animated fadeInRight" data-wow-delay="1s" data-wow-duration=".7s" data-wow-iteration="1">
+							<div class="stages-itm descr-stage style-blue wow animated fadeInRight" data-wow-delay="1.4s" data-wow-duration=".7s" data-wow-iteration="1">
+								<span class="text">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur consectetur placeat quam impedit, optio assumenda dolorum repudiandae vitae magnam veritatis!
+								</span>
+							</div>
+						</div>
+						<div class="col">
+							<div class="stages-itm document-stage wow animated fadeInDown" data-wow-delay="1.2s" data-wow-duration=".7s" data-wow-iteration="1">
 								<span class="text">
 									Договор<br>
 									Пакет документов<br>
@@ -147,12 +153,19 @@
 					</div>
 					<div class="row">
 						<div class="col">
-							<div class="stages-itm final-stage wow animated fadeInUp" data-wow-delay="1.5s" data-wow-duration="1s" data-wow-iteration="1">
+							<div class="stages-itm final-stage wow animated fadeInUp" data-wow-delay="1.8s" data-wow-duration="1s" data-wow-iteration="1">
 								<span class="text">
 									Переезд в Польшу<br>
 									Поддержка
 								</span>
 								<img class="icon" src="./img/svg/operator.svg" alt="hanshake">
+							</div>
+						</div>
+						<div class="col">
+							<div class="stages-itm descr-stage style-green wow animated fadeInLeft" data-wow-delay="2.2s" data-wow-duration=".7s" data-wow-iteration="1">
+								<span class="text">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum odit autem porro perspiciatis soluta dicta repudiandae id voluptate unde fugit!
+								</span>
 							</div>
 						</div>
 					</div>
@@ -242,7 +255,7 @@
 					<h2>Хотите заработать<br> на свою мечту<br> в <span class="success">новом 2019</span> ?</h2>
 				</div>
 				<div class="btn-wrap">
-					<a href="#" class="btn btn-success">Да, я хочу!</a>
+					<a href="#" class="btn btn-success js-contact-popup">Да, я хочу!</a>
 					<a href="#" class="btn btn-default">Все услуги <span class="darken">Ridewap</span></a>
 				</div>
 			</div>
@@ -292,10 +305,25 @@
 	</div><!-- End page-wrapper -->
 
 	<!-- Popups -->
-	<div class="b-popup" id="video-popup">
+	<div class="b-popup" id="contact-popup">
 		<div class="b-popup__content">
 			<a href="#" class="b-popup__close js-popupClose">&times;</a>
-			<p class="b-popup__text"></p>
+			<div class="b-popup__head">
+				<span class="title"></span>
+			</div>
+			<div class="b-popup__body">
+				<div class="contact-form-wrap">
+					<form action="">
+						<div class="form-row">
+							<label class="cust-inp">
+								<span class="title">Имя:</span>
+								<input type="text" placeholder="Имя">
+								<p class="help-block">Заполните это поле</p>
+							</label>
+						</div>
+					</form>
+				</div>
+			</div>
 		</div>
 	</div>
 	<!-- END Popups -->

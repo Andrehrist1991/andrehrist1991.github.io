@@ -65,25 +65,58 @@ $(document).ready(function() {
     };
     /*END Parallax*/
 
+    /*Parallax-2*/
+    if ( $(".js-parallax-2").length ) {
+        function parallax() {
+            var distanceTop = $(".js-parallax-2").offset().top;
+            var windowHeight = $(window).innerHeight();
+            $(window).scroll(function() {
+                var st = $(this).scrollTop();
+                if ($(window).width() > 768) {
+                    if ((st + windowHeight) > distanceTop) {
+                        $("body .js-parallax-2").css({
+                                "background-position": st /40 + "px " + "50%"
+                        });
+                    } else {
+                        $("body .js-parallax-2").css({
+                                "background-position": "50%"
+                        });
+                    };
+                }
+            }); 
+        };
+        parallax();
+        $(window).resize(function() {
+            parallax();
+        });
+    };
+    /*END Parallax-2*/
+
 	/*END Active video*/
 
 	/*Custom popup*/
-	// $('body').on('click', '.js-video-popup', function(e) {
-	// 	e.preventDefault();
-	// 	$('.b-popup#video-popup').css("display", "block");
-	// 	$("body").addClass('-overflow-active');
-	// });
-	// $(document).on('click', '.js-popupClose', function(e) {
-	// 	e.preventDefault();
-	// 	$(this).parents(".b-popup").css("display", "none");
-	// });
-	// $(document).on('click', function(e) {
-	// 	var popupCallback = $(".b-popup#video-popup");
-	// 	if( e.target == popupCallback[0] ) {
-	// 		$(".b-popup#video-popup").css("display", "none");
-	// 		$("body").removeClass('-overflow-active');
-	// 	}
-	// });
+	$('body').on('click', '.js-contact-popup', function(e) {
+		e.preventDefault();
+		$('.b-popup#contact-popup').css("display", "block");
+		$("body").addClass('-overflow-active');
+	});
+	$(document).on('click', '.js-popupClose', function(e) {
+		e.preventDefault();
+		$(this).parents(".b-popup").css("display", "none");
+	});
+	$(document).on('click', function(e) {
+		var popupCallback = $(".b-popup#contact-popup");
+		if( e.target == popupCallback[0] ) {
+			$(".b-popup#contact-popup").css("display", "none");
+			$("body").removeClass('-overflow-active');
+		}
+	});
+
+	/*Read More*/
+	$(document).click('.js-read-more', function(e) {
+		e.preventDefault();
+		$(".js-descr-toggle").toggleClass("active");
+	});
 
 
 	/*Mobile menu*/
