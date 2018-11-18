@@ -118,6 +118,13 @@ $(document).ready(function() {
 		$(".js-descr-toggle").toggleClass("active");
 	});
 
+	// Button Up, Help Button
+	$(".btn-up").click(function() {
+		$("html, body").animate({ scrollTop: 0 }, "slow");
+		return false;
+	});
+	// Button Up END
+
 
 	/*Mobile menu*/
 	// function mobileMenu() {
