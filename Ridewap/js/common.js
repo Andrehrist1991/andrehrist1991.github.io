@@ -17,6 +17,9 @@ $(document).ready(function() {
       // },
     });
 
+	/*Table wrap*/
+    $("table").wrap("<div class='size-table-wrap'></div>");
+
     /*Wow-init*/
     new WOW().init();
     /*END Wow-init*/
