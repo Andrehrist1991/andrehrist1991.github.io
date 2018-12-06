@@ -116,10 +116,12 @@ $(document).ready(function() {
 	});
 
 	/*Read More*/
-	$(document).click('.js-read-more', function(e) {
-		e.preventDefault();
-		$(".js-descr-toggle").toggleClass("active");
-	});
+  if ( $(".js-read-more").length ) {
+    $(document).click('.js-read-more', function(e) {
+      e.preventDefault();
+      $(".js-descr-toggle").toggleClass("active");
+    });
+  };
 
 	// Button Up, Help Button
 	$(".btn-up").click(function() {
@@ -140,5 +142,149 @@ $(document).ready(function() {
 	// }
 	/*End Mobile menu*/
 
+  /*Custom-filter*/
+  // $(document).on('click', '.js-btn-filter', function() {
+  //   $(this).toggleClass('active');
+  //   var curData = $(this).attr("data-filter");
+  //   var activeBtn = $(".js-btn-filter").hasClass("active");
+  //   //$(".js-filtering-grid").find(".filtering-row").hide();
+
+  //   //$(".filtering-row").not(curData).hide();
+  //   // if ($(".filtering-row").hasClass(curData)) {
+  //   //   console.log("You Win!");
+  //   // }
+
+
+
+  //   function filtering() {
+  //     //console.log(curData);
+  //     console.log(activeBtn);
+  //   };
+  //   filtering();
+  // });
+
+
+
+
+
+
+  // var $grid = $('.grid').isotope({
+  //   // options
+  // });
+  // $('.button-group').on( 'click', 'button', function() {
+  //   $(this).toggleClass('active');
+
+  //   var activeBtn = $(".js-btn-filter").hasClass("active");
+
+  //   var result = $(activeBtn).attr('data-filter');
+
+  //   var filterValue = $(this).attr('data-filter');
+  //   $grid.isotope({ filter: filterValue });
+  //   console.log(result);
+  // });
+
+
+  //работает
+  // var $grid = $('.grid').isotope({
+  //   // options
+  // });
+  // $('.button-group').on( 'click', 'button', function() {
+  //   $(this).toggleClass('active');
+  //   var filterValue = $(this).attr('data-filter');
+  //   $grid.isotope({ filter: filterValue });
+  // });
+  //работает
+
+
+
+
+
+  /*END Custom-filter*/
+
+
+    /*Isotope customization*/
+    var $grid = $('.grid').isotope({
+      itemSelector: '.filtering-row'
+    });
+
+    // store filter for each group
+    var filters = {};
+
+    $('.filters').on( 'click', '.js-btn-filter', function( event ) {
+      var $button = $( event.currentTarget );
+      // get group key
+      var $buttonGroup = $button.parents('.button-group');
+      var filterGroup = $buttonGroup.attr('data-filter-group');
+      // set filter for group
+      filters[ filterGroup ] = $button.attr('data-filter');
+      // combine filters
+      var filterValue = concatValues( filters );
+      // set filter for Isotope
+      $grid.isotope({ filter: filterValue });
+    });
+
+    // change is-checked class on buttons
+    $('.button-group').each( function( i, buttonGroup ) {
+      var $buttonGroup = $( buttonGroup );
+      $buttonGroup.on( 'click', 'button', function( event ) {
+        $buttonGroup.find('.active').removeClass('active');
+        var $button = $( event.currentTarget );
+        $button.addClass('active');
+      });
+    });
+      
+    // flatten object by concatting values
+    function concatValues( obj ) {
+      var value = '';
+      for ( var prop in obj ) {
+        value += obj[ prop ];
+      }
+      return value;
+    }
+
+    /*END Isotope customization*/
+
+    //Search in vacancy table
+
+
+
+    
+
+    // function setDataFind() {
+    //   var searchDefine = $(".filtering-row").attr('data-find');
+    //   var valololo = $(".filtering-row div:first-child span").html();
+    //   for (var i = 0; i < searchDefine.length; i++) {
+    //     console.log(searchDefine);
+    //   }
+      
+    // };
+    // setDataFind();
+
+
+
+    $("#vacancy-search").on("keyup", function() {
+      var value = $(this).val().toLowerCase();
+      var empty = $(".filtering-row div span").css('display') == 'none';
+      $(".js-filtering-grid div span").filter(function() {
+        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+        
+
+        if ($(".filtering-row div span").css('display') == 'none') {
+            $(this).parents(".filtering-row").siblings().css("color", "red");
+        };
+
+      });
+
+      // if ($(".filtering-row div span").css('display') == 'none') {
+      //   $(this).parents("filtering-row").css("color", "red");
+      //   console.log("Fire!");
+      // }
+    });
+    //END Search in vacancy table
+
+    
+
 });
+
+
 
