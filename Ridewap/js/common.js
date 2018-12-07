@@ -18,7 +18,7 @@ $(document).ready(function() {
     });
 
 	/*Table wrap*/
-    $("table").wrap("<div class='size-table-wrap'></div>");
+    $("table, .vacancy-table").wrap("<div class='size-table-wrap'></div>");
 
     /*Wow-init*/
     new WOW().init();
@@ -142,75 +142,30 @@ $(document).ready(function() {
 	// }
 	/*End Mobile menu*/
 
-  /*Custom-filter*/
-  // $(document).on('click', '.js-btn-filter', function() {
-  //   $(this).toggleClass('active');
-  //   var curData = $(this).attr("data-filter");
-  //   var activeBtn = $(".js-btn-filter").hasClass("active");
-  //   //$(".js-filtering-grid").find(".filtering-row").hide();
-
-  //   //$(".filtering-row").not(curData).hide();
-  //   // if ($(".filtering-row").hasClass(curData)) {
-  //   //   console.log("You Win!");
-  //   // }
-
-
-
-  //   function filtering() {
-  //     //console.log(curData);
-  //     console.log(activeBtn);
-  //   };
-  //   filtering();
-  // });
-
-
-
-
-
-
-  // var $grid = $('.grid').isotope({
-  //   // options
-  // });
-  // $('.button-group').on( 'click', 'button', function() {
-  //   $(this).toggleClass('active');
-
-  //   var activeBtn = $(".js-btn-filter").hasClass("active");
-
-  //   var result = $(activeBtn).attr('data-filter');
-
-  //   var filterValue = $(this).attr('data-filter');
-  //   $grid.isotope({ filter: filterValue });
-  //   console.log(result);
-  // });
-
-
-  //работает
-  // var $grid = $('.grid').isotope({
-  //   // options
-  // });
-  // $('.button-group').on( 'click', 'button', function() {
-  //   $(this).toggleClass('active');
-  //   var filterValue = $(this).attr('data-filter');
-  //   $grid.isotope({ filter: filterValue });
-  // });
-  //работает
-
-
-
-
-
-  /*END Custom-filter*/
+  // Search in vacancy table
+  function vacancySearch() {
+    $("#vacancy-search").on("keyup", function() {
+      var value = $(this).val().toLowerCase();
+        $(".js-filtering-grid .filtering-row").filter(function() {
+        $(this).toggle($(this).find("div:first-child").text().toLowerCase().indexOf(value) > -1);
+      });
+    });
+  }
+  vacancySearch();
+  //END Search in vacancy table
 
 
     /*Isotope customization*/
     var $grid = $('.grid').isotope({
-      itemSelector: '.filtering-row'
+      itemSelector: '.filtering-row',
+      transitionDuration: 0
     });
 
     // store filter for each group
     var filters = {};
 
     $('.filters').on( 'click', '.js-btn-filter', function( event ) {
+      vacancySearch();
       var $button = $( event.currentTarget );
       // get group key
       var $buttonGroup = $button.parents('.button-group');
@@ -243,44 +198,6 @@ $(document).ready(function() {
     }
 
     /*END Isotope customization*/
-
-    //Search in vacancy table
-
-
-
-    
-
-    // function setDataFind() {
-    //   var searchDefine = $(".filtering-row").attr('data-find');
-    //   var valololo = $(".filtering-row div:first-child span").html();
-    //   for (var i = 0; i < searchDefine.length; i++) {
-    //     console.log(searchDefine);
-    //   }
-      
-    // };
-    // setDataFind();
-
-
-
-    $("#vacancy-search").on("keyup", function() {
-      var value = $(this).val().toLowerCase();
-      var empty = $(".filtering-row div span").css('display') == 'none';
-      $(".js-filtering-grid div span").filter(function() {
-        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
-        
-
-        if ($(".filtering-row div span").css('display') == 'none') {
-            $(this).parents(".filtering-row").siblings().css("color", "red");
-        };
-
-      });
-
-      // if ($(".filtering-row div span").css('display') == 'none') {
-      //   $(this).parents("filtering-row").css("color", "red");
-      //   console.log("Fire!");
-      // }
-    });
-    //END Search in vacancy table
 
     
 

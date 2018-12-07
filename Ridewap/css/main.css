@@ -2217,12 +2217,33 @@ a {
     font-size: 16px; }
 
 .vacancy-section {
-  background-color: #e3f2fd; }
+  background-color: #eeeeee; }
 
 .vacancy-filter__wrap {
-  padding: 40px 0 0; }
+  padding: 40px 0 50px;
+  position: relative;
+  z-index: 2;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+          background-size: cover; }
+  .vacancy-filter__wrap:before {
+    content: '';
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.75); }
   .vacancy-filter__wrap .page-heading {
-    margin-bottom: 40px; }
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 2; }
+  .vacancy-filter__wrap .descr-text {
+    position: relative;
+    z-index: 2;
+    margin: 0 0 30px; }
   .vacancy-filter__wrap .filters {
     display: -webkit-box;
     display: -webkit-flex;
@@ -2232,7 +2253,9 @@ a {
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
         -ms-flex-direction: column;
-            flex-direction: column; }
+            flex-direction: column;
+    position: relative;
+    z-index: 2; }
     .vacancy-filter__wrap .filters .button-group button {
       position: relative;
       background-color: transparent;
@@ -2241,7 +2264,7 @@ a {
       min-width: 180px;
       height: 35px;
       cursor: pointer;
-      color: #F4772B;
+      color: #6CDC7C;
       font-weight: 900;
       font-size: 15px;
       text-align: left;
@@ -2256,6 +2279,7 @@ a {
         display: inline-block;
         width: 35px;
         height: 35px;
+        border: 2px solid #88F;
         -webkit-border-radius: 5px;
                 border-radius: 5px;
         background-color: #fff;
@@ -2287,18 +2311,87 @@ a {
       margin: 0 0 5px;
       font-size: 20px;
       color: #00AD5D; }
+  .vacancy-filter__wrap .search-block {
+    margin: 30px 0 0; }
+
+.search-block {
+  position: relative;
+  border: 3px solid #88F;
+  max-width: 300px;
+  -webkit-border-radius: 15px;
+          border-radius: 15px;
+  overflow: hidden;
+  height: 45px;
+  background-color: #fff; }
+  .search-block:before {
+    content: '';
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 50px;
+    background-color: #00AD5D;
+    background-image: url("../img/svg/magnifier.svg");
+    background-repeat: no-repeat;
+    -webkit-background-size: 25px 25px;
+            background-size: 25px;
+    background-position: 68% center;
+    z-index: 1; }
+  .search-block input {
+    height: 100%;
+    width: -webkit-calc(100% - 40px);
+    width: calc(100% - 40px);
+    -webkit-border-radius: 10px;
+            border-radius: 10px;
+    border: none;
+    padding: 10px 15px;
+    position: relative;
+    z-index: 2;
+    color: #5b5b5b;
+    font-size: 16px;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    font-family: 'Oswald', sans-serif; }
+    .search-block input::-webkit-input-placeholder {
+      opacity: .5;
+      font-family: 'Oswald', sans-serif;
+      font-size: 16px; }
+    .search-block input::-moz-placeholder {
+      opacity: .5;
+      font-family: 'Oswald', sans-serif;
+      font-size: 16px; }
+    .search-block input:-ms-input-placeholder {
+      opacity: .5;
+      font-family: 'Oswald', sans-serif;
+      font-size: 16px; }
+    .search-block input::-ms-input-placeholder {
+      opacity: .5;
+      font-family: 'Oswald', sans-serif;
+      font-size: 16px; }
+    .search-block input::placeholder {
+      opacity: .5;
+      font-family: 'Oswald', sans-serif;
+      font-size: 16px; }
+    .search-block input:focus {
+      width: 100%; }
 
 .vacancy-table__section {
   overflow: hidden !important;
-  background-color: #f5f5f5; }
+  background-color: #f5f5f5;
+  position: relative; }
 
 .vacancy-table__wrap {
   background-color: #fff;
-  padding: 30px 0 40px; }
+  padding: 30px 0 80px; }
 
 .vacancy-table {
   display: table;
-  width: 100%; }
+  width: 100%;
+  background: #fff;
+  position: relative;
+  z-index: 2; }
   .vacancy-table .thead {
     display: table-header-group;
     font-size: 24px;
@@ -2328,6 +2421,18 @@ a {
         display: table-cell !important; }
       .vacancy-table .filtering-row > div i:not(:first-child) {
         margin-left: 15px; }
+
+.table-help-block {
+  border: 1px solid #cfd8dc;
+  height: 50px;
+  padding: 10px 15px 10px 40px;
+  font-size: 18px;
+  position: relative;
+  color: #0A417F;
+  -webkit-transform: translateY(240%);
+      -ms-transform: translateY(240%);
+          transform: translateY(240%);
+  z-index: 1; }
 
 .button {
   display: inline-block;
