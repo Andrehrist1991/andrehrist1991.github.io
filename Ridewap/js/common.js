@@ -11,6 +11,19 @@ $(document).ready(function() {
         nextEl: '.rev-next',
         prevEl: '.rev-prev',
       },
+      breakpoints: {
+        // 320: {
+        //   slidesPerView: 1,
+        //   spaceBetween: 10
+        // },
+        576: {
+          slidesPerView: 1
+        },
+        992: {
+          slidesPerView: 2,
+          spaceBetween: 20
+        }
+      }
       // pagination: {
       //   el: '.swiper-pagination',
       //   clickable: true,
@@ -132,14 +145,12 @@ $(document).ready(function() {
 
 
 	/*Mobile menu*/
-	// function mobileMenu() {
-	// 	$('body').on('click', '.js-menuToggle', function(e){
-	// 		e.preventDefault();
-	// 		$(this).toggleClass('-is-active');
-	// 		$('body').toggleClass('-style_fixed');
-	// 		$('.js-mainMenu').toggleClass('-is-active');
-	// 	});
-	// }
+	$('.js-menuToggle').click(function(e){
+		e.preventDefault();
+		$(this).toggleClass('-is-active');
+		$('body').toggleClass('-style_fixed');
+		$('.header__right').toggleClass('-is-active');
+	});
 	/*End Mobile menu*/
 
   // Search in vacancy table
