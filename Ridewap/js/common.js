@@ -4,31 +4,41 @@ $(window).on('load', function () {
 $(document).ready(function() {
 
 	var swiper = new Swiper('.js-reviews-slider', {
-      slidesPerView: 3,
-      spaceBetween: 30,
-      grabCursor: true,
-      navigation: {
-        nextEl: '.rev-next',
-        prevEl: '.rev-prev',
+	    slidesPerView: 3,
+	    spaceBetween: 30,
+	    grabCursor: true,
+	    navigation: {
+	      nextEl: '.js-rev-next',
+	      prevEl: '.js-rev-prev',
+	    },
+	    breakpoints: {
+	      576: {
+	        slidesPerView: 1
+	      },
+	      992: {
+	        slidesPerView: 2,
+	        spaceBetween: 20
+	      }
+	    }
+	  });
+  
+  var swiper = new Swiper('.js-news-slider', {
+    slidesPerView: 3,
+    spaceBetween: 0,
+    grabCursor: true,
+    navigation: {
+      nextEl: '.js-rev-next',
+      prevEl: '.js-rev-prev',
+    },
+    breakpoints: {
+      600: {
+        slidesPerView: 1
       },
-      breakpoints: {
-        // 320: {
-        //   slidesPerView: 1,
-        //   spaceBetween: 10
-        // },
-        576: {
-          slidesPerView: 1
-        },
-        992: {
-          slidesPerView: 2,
-          spaceBetween: 20
-        }
+      1200: {
+        slidesPerView: 2,
       }
-      // pagination: {
-      //   el: '.swiper-pagination',
-      //   clickable: true,
-      // },
-    });
+    }
+  });
 
 	/*Table wrap*/
     $("table, .vacancy-table").wrap("<div class='size-table-wrap'></div>");
@@ -128,14 +138,6 @@ $(document).ready(function() {
 		}
 	});
 
-	/*Read More*/
-  if ( $(".js-read-more").length ) {
-    $(document).click('.js-read-more', function(e) {
-      e.preventDefault();
-      $(".js-descr-toggle").toggleClass("active");
-    });
-  };
-
 	// Button Up, Help Button
 	$(".btn-up").click(function() {
 		$("html, body").animate({ scrollTop: 0 }, "slow");
@@ -145,19 +147,21 @@ $(document).ready(function() {
 
   //Arrow-down
   if ( $(".arrow-down").length ) {
-    $(".arrow-down").click(function() {
-      var winHeight = $(window).innerHeight();
-      $("html, body").animate({ scrollTop: winHeight }, "slow");
-      return false;
-      
-    });
-    $(window).scroll(function() {
-      if ( $(window).scrollTop() > 200 ) {
-        $(".arrow-down").hide("slow");
-      } else {
-        $(".arrow-down").show("slow");
-      }
-    });
+  	if ($(window).width() > 576) {
+  		$(".arrow-down").click(function() {
+	      var winHeight = $(window).innerHeight();
+	      $("html, body").animate({ scrollTop: winHeight }, "slow");
+	      return false;
+	      
+	    });
+	    $(window).scroll(function() {
+	      if ( $(window).scrollTop() > 200 ) {
+	        $(".arrow-down").hide("slow");
+	      } else {
+	        $(".arrow-down").show("slow");
+	      }
+	    });
+  	}
   };
   //END Arrow-down
 
@@ -166,6 +170,7 @@ $(document).ready(function() {
 	$('.js-menuToggle').click(function(e){
 		e.preventDefault();
 		$(this).toggleClass('-is-active');
+		$('.page_wrapper').toggleClass('-style_fixed');
 		$('body').toggleClass('-style_fixed');
 		$('.header__right').toggleClass('-is-active');
 	});
@@ -182,6 +187,20 @@ $(document).ready(function() {
   }
   vacancySearch();
   //END Search in vacancy table
+
+
+  //Vacancy add class
+  // function vacAddClass() {
+  //   $.expr[":"].exact = $.expr.createPseudo(function(arg) {
+  //     return function(element) {
+  //       return $(element).text() === arg.trim();
+  //     }
+  //   });
+  //   $(".type:exact('Водитель')").parents(".filtering-row").addClass("driver");
+  //   $(".type:exact('Швея')").parents(".filtering-row").addClass("bom-bom");
+  // }
+  // vacAddClass();
+  //END Vacancy add class
 
 
     /*Isotope customization*/
@@ -227,9 +246,6 @@ $(document).ready(function() {
     }
 
     /*END Isotope customization*/
-
-    
-
 });
 
 

@@ -3,7 +3,7 @@
 <head>
 	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 	<title>Выбор вакансий</title>
-	<!-- <link rel="stylesheet" href="css/font-awesome.min.css"> -->
+	
 	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Raleway:300,400,700,800" rel="stylesheet">
 	<link rel="stylesheet" href="css/swiper.min.css" type="text/css">
@@ -11,6 +11,9 @@
 	<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
 	<link rel="stylesheet" href="css/libs.min.css">
 	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/fixes.css">
+	<link rel="icon" type="image/png" href="./img/favicon.png">
+	<meta property=”og:image” content=”./img/priview.png” />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 <body>
@@ -41,27 +44,31 @@
 				            <a href="#">О нас</a>
 				          </li>
 				          <li class="">
-				            <a href="#">Услуги и цены</a>
+				            <a href="#">Вакансии</a>
 				            <ul>
-				            	<li><a href="#">Вакансии</a></li>
-				            	<li><a href="#">Виды работ</a></li>
+				            	<li><a href="#">Для мужчин</a></li>
+				            	<li><a href="#">Для женщин</a></li>
+				            	<li><a href="#">Для пар</a></li>
 				            </ul>
 				          </li>
 				          <li class="">
+				            <a href="#">Услуги и цены</a>
+				          </li>
+				          <li class="">
+				            <a href="#">Акции</a>
+				          </li>
+				          <li class="">
+				            <a href="#">Статьи</a>
+				          </li>
+				          <li class="">
 				            <a href="#">Контакты</a>
-				          </li>
-				          <li class="">
-				            <a href="#">Спец.предложения</a>
-				          </li>
-				          <li class="">
-				            <a href="#">FAQ</a>
 				          </li>
 				        </ul>
 				    </div>
 			    </div>
 		    </div>
 		</header>
-		<section class="page-section first-section heading-section">
+		<section class="page-section first-section heading-section" style="background-image: url('./img/reviews-bg.jpg');">
 			<div class="container">
 				<div class="page-heading style-primary text-left">
 					<h1><b>Выбор </b>вакансий</h1>
@@ -131,7 +138,7 @@
 						    </div>
 						</div>
 						<div class="search-block">
-							<input id="vacancy-search" type="text" placeholder="Поиск">
+							<input id="vacancy-search" type="text" placeholder="Название вакансии">
 						</div>	
 					</div>
 				</div>
@@ -156,7 +163,7 @@
 						</div>
 						<div class="js-filtering-grid grid tbody">
 						  	<div class="filtering-row young-age visa practice men">
-						  		<div>Водитель</div>
+						  		<div class="type">Водитель</div>
 							    <div>18-22</div>
 						    	<div><i class="check"></i></div>
 						    	<div><i class="check"></i></div>
@@ -164,7 +171,7 @@
 						    	<div>Люблин</div>
 							</div>
 							<div class="filtering-row young-age visa practice women">
-							    <div>Швея</div>
+							    <div class="type">Швея</div>
 							    <div>18-22</div>
 						    	<div><i class="check"></i></div>
 						    	<div><i class="check"></i></div>
@@ -361,7 +368,7 @@
 						<span class="descr">оставьте заявку и мы свяжемся с вами</span>
 					</div>
 					<div class="btn-wrap">
-						<a href="#" class="btn btn-white">Оставить заявку</a>
+						<a href="#" class="btn btn-white b24-web-form-popup-btn-15">Оставить заявку</a>
 					</div>
 				</div>
 			</div>
@@ -435,10 +442,29 @@
 	</div>
 	<!-- END Popups -->
 
-	<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
 	<script src="js/libs.min.js"></script>
-	<!-- <script async src="https://static.addtoany.com/practiceu/page.js"></script> -->
-	
 	<script src="js/common.js"></script>
+	<script type="text/javascript">
+	  (function(d, w, s) {
+		var widgetHash = 't7hu1muw4trdbvcd9uxq', gcw = d.createElement(s); gcw.type = 'text/javascript'; gcw.async = true;
+		gcw.src = '//widgets.binotel.com/getcall/widgets/'+ widgetHash +'.js';
+		var sn = d.getElementsByTagName(s)[0]; sn.parentNode.insertBefore(gcw, sn);
+	  })(document, window, 'script');
+	</script>
+
+	<script id="bx24_form_button" data-skip-moving="true">
+        (function(w,d,u,b){w['Bitrix24FormObject']=b;w[b] = w[b] || function(){arguments[0].ref=u;
+                (w[b].forms=w[b].forms||[]).push(arguments[0])};
+                if(w[b]['forms']) return;
+                var s=d.createElement('script');s.async=1;s.src=u+'?'+(1*new Date());
+                var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
+        })(window,document,'https://ridewap.bitrix24.ua/bitrix/js/crm/form_loader.js','b24form');
+
+        b24form({"id":"15","lang":"ua","sec":"jyn114","type":"button","click":""});
+	</script>
+	<button class="b24-web-form-popup-btn-15">Назва кнопки</button>
+
+
+
 </body>
 </html>
