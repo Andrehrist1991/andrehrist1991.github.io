@@ -63,6 +63,7 @@ $(document).ready(function() {
 		$(this).addClass("active");
 		$(this).html('<iframe src="https://www.youtube.com/embed/'+ dataYoutube +'?autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
 	});
+  /*END Active video*/
 
 	/*Parallax*/
     if ( $(".js-parallax").length ) {
@@ -116,27 +117,9 @@ $(document).ready(function() {
             parallax();
         });
     };
-    /*END Parallax-2*/
+  /*END Parallax-2*/
 
-	/*END Active video*/
 
-	/*Custom popup*/
-	$('body').on('click', '.js-contact-popup', function(e) {
-		e.preventDefault();
-		$('.b-popup#contact-popup').css("display", "block");
-		$("body").addClass('-overflow-active');
-	});
-	$(document).on('click', '.js-popupClose', function(e) {
-		e.preventDefault();
-		$(this).parents(".b-popup").css("display", "none");
-	});
-	$(document).on('click', function(e) {
-		var popupCallback = $(".b-popup#contact-popup");
-		if( e.target == popupCallback[0] ) {
-			$(".b-popup#contact-popup").css("display", "none");
-			$("body").removeClass('-overflow-active');
-		}
-	});
 
 	// Button Up, Help Button
 	$(".btn-up").click(function() {
@@ -170,7 +153,6 @@ $(document).ready(function() {
 	$('.js-menuToggle').click(function(e){
 		e.preventDefault();
 		$(this).toggleClass('-is-active');
-		$('.page_wrapper').toggleClass('-style_fixed');
 		$('body').toggleClass('-style_fixed');
 		$('.header__right').toggleClass('-is-active');
 	});
