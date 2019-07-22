@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Skalar test</title>
+        <meta name="theme-color" content="#fff">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <link rel="shortcut icon" href="./img/favicons/favicon.ico" type="image/x-icon">
+        <link rel="icon" sizes="16x16" href="./img/favicons/favicon-16x16.png" type="image/png">
+        <link rel="icon" sizes="32x32" href="./img/favicons/favicon-32x32.png" type="image/png">
+        <link rel="apple-touch-icon-precomposed" href="../img/favicons/apple-touch-icon-precomposed.png">
+        <link rel="apple-touch-icon" href="../img/favicons/apple-touch-icon.png">
+        <link rel="apple-touch-icon" sizes="57x57" href="./img/favicons/apple-touch-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="./img/favicons/apple-touch-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="./img/favicons/apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="./img/favicons/apple-touch-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="../img/favicons/apple-touch-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="../img/favicons/apple-touch-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="../img/favicons/apple-touch-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="../img/favicons/apple-touch-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="167x167" href="../img/favicons/apple-touch-icon-167x167.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="../img/favicons/apple-touch-icon-180x180.png">
+        <link rel="apple-touch-icon" sizes="1024x1024" href="../img/favicons/apple-touch-icon-1024x1024.png">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./styles/main.css">
+    </head>
+    <body>
+        <header class="header js-header">
+	<div class="container">
+		<div class="header__top">
+			<div class="logo__wrap">
+				<a href="#" class="logo">Quantum</a>
+			</div>
+			<form action="" class="search-form">
+				<input type="text" class="text-input" placeholder="Search goods" />
+				<div class="dropdown js-dropdown">
+					<span class="dropdown__btn js-dropdown-btn"><span class="value">Category</span><i class="chevron-down-ic"></i></span>
+					<div class="dropdown__content js-dropdown-content">
+						<ul class="dropdown__list select js-select">
+							<li><span>Category 1</span></li>
+							<li><span>Category 2</span></li>
+							<li><span>Category 3</span></li>
+							<li><span>Category 4</span></li>
+							<li><span>Category 5</span></li>
+						</ul>
+					</div>
+				</div>
+				<input type="submit" class="search-form__btn" value="">
+			</form>
+			<ul class="header-actions">
+				<li class="header-actions__itm active"><a href="#" class="header-actions__lnk"><i class="header-actions__icon cart-ic"></i><span class="header-actions__count">2</span>&nbsp;<span class="header-actions__name">Items</span></a></li>
+				<li class="header-actions__itm"><a href="#" class="header-actions__lnk"><i class="header-actions__icon heart-ic"></i><span class="header-actions__count"></span>&nbsp;<span class="header-actions__name">Wish List</span></a></li>
+				<li class="header-actions__itm"><a href="#" class="header-actions__lnk" id="js-sign-in"><i class="header-actions__icon profile-ic"></i><span class="header-actions__name">Sign in</span></a></li>
+			</ul>
+			<span class="menu-burger js-menuToggle">
+				<span class="mMt one"></span>
+				<span class="mMt two"></span>
+				<span class="mMt three"></span>
+				<span class="mMt four"></span>
+			</span>
+		</div>
+	</div>
+	<div class="header__bottom">
+		<div class="container">
+			<nav>
+				<ul class="menu">
+					<li class="menu__itm all-categories js-dropdown">
+						<span class="menu__itm__burger">
+							<span class="mMt one"></span>
+							<span class="mMt two"></span>
+							<span class="mMt three"></span>
+						</span>
+						<a href="#" class="menu__lnk js-dropdown-btn">All Categories</a>
+						<div class="dropdown__content js-dropdown-content">
+							<ul class="dropdown__list">
+								<li><span>Category 1</span></li>
+								<li><span>Category 2</span></li>
+								<li><span>Category 3</span></li>
+								<li><span>Category 4</span></li>
+								<li><span>Category 5</span></li>
+							</ul>
+						</div>
+					</li>
+					<li class="menu__itm"><a href="#" class="menu__lnk">Super Deals</a></li>
+					<li class="menu__itm"><a href="#" class="menu__lnk">Featured Brands</a></li>
+					<li class="menu__itm"><a href="#" class="menu__lnk">Collections</a></li>
+					<li class="menu__itm"><a href="#" class="menu__lnk">Bestselling</a></li>
+				</ul>
+				<div class="dropdown__set">
+					<div class="dropdown js-dropdown">
+						<span class="dropdown__btn js-dropdown-btn"><span class="value">Help</span><i class="chevron-down-ic"></i></span>
+						<div class="dropdown__content js-dropdown-content">
+							<ul class="dropdown__list select">
+								<li><span>Help 1</span></li>
+								<li><span>Help 2</span></li>
+								<li><span>Help 3</span></li>
+							</ul>
+						</div>
+					</div>
+					<div class="dropdown js-dropdown">
+						<span class="dropdown__btn js-dropdown-btn"><span class="value">USD</span><i class="chevron-down-ic"></i></span>
+						<div class="dropdown__content js-dropdown-content">
+							<ul class="dropdown__list select">
+								<li><span>USD</span></li>
+								<li><span>EUR</span></li>
+								<li><span>UAH</span></li>
+							</ul>
+						</div>
+					</div>
+					<div class="dropdown js-dropdown">
+						<span class="dropdown__btn js-dropdown-btn"><span class="value">Language</span><i class="chevron-down-ic"></i></span>
+						<div class="dropdown__content js-dropdown-content">
+							<ul class="dropdown__list select">
+								<li><span>English</span></li>
+								<li><span>Русский</span></li>
+								<li><span>Українська</span></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</nav>
+		</div>	
+	</div>
+</header>
+        <main class="main-content">
+	<div class="container">
+		<div class="main-content__top">
+			<nav>
+				<ul class="breadcrumbs">
+					<li class="breadcrumbs__itm"><a href="#">Main</a></li>
+					<li class="breadcrumbs__itm"><a href="#">Mobile phones</a></li>
+					<li class="breadcrumbs__itm"><a href="#">Apple</a></li>
+					<li class="breadcrumbs__itm"><span>Apple iPhone 7, 128 GB</span></li>
+				</ul>
+			</nav>
+			<div class="add-to-any">
+				Share:
+				<div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+				    <a class="a2a_button_facebook a2a_counter">
+				    	<img src="./img/svg/facebook.svg" border="0" alt="Facebook" width="20" height="20">
+				    </a>
+				    <a class="a2a_button_tumblr a2a_counter">
+				    	<img src="./img/svg/twitter.svg" border="0" alt="Twitter" width="20" height="20">
+				    </a>
+				</div>
+			</div>
+		</div>
+		<div class="page__heading">
+			<h1>Smartphones</h1>
+		</div>
+	</div>
+	<div class="container">
+		<div class="main-content__middle">
+			<aside class="main-content__sidebar" id="sidebar">
+				<span class="close" id="js-hideSidebar"><i class="times-ic"></i></span>
+				<form action="#">
+					<div class="main-content__sidebar-itm">
+						<div class="dropdown js-dropdown">
+							<span class="dropdown__btn js-dropdown-btn"><span class="value">Price</span><i class="chevron-down-ic"></i></span>
+							<div class="dropdown__content js-dropdown-content">
+								<div class="range__wrap">
+									<input type="text" class="range__slider js-range-slider" id="rangeslider" name="example_name" value="" />
+									<div class="range__values">
+										<div class="range__value__wrap">
+											<input type="text" value="0" class="range__value js-from">
+										</div>
+										&mdash;
+										<div class="range__value__wrap">
+											<input type="text" value="1000" class="range__value js-to">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="main-content__sidebar-itm">
+						<div class="dropdown js-dropdown">
+							<span class="dropdown__btn js-dropdown-btn"><span class="value">Brand</span><i class="chevron-down-ic"></i></span>
+							<div class="dropdown__content js-dropdown-content">
+								<div class="main-content__show-more js-showMoreCont">
+									<div class="check-set w-50">
+										<label class="cust-check">
+											<input type="checkbox" name="brand1" value="Apple"><i class="check-ic"><span></span></i><span class="">Apple</span>
+										</label>
+										<label class="cust-check">
+											<input type="checkbox" name="brand2" value="Sony"><i class="check-ic"><span></span></i><span class="">Sony</span>
+										</label>
+										<label class="cust-check">
+											<input type="checkbox" name="brand3" value="Asus"><i class="check-ic"><span></span></i><span class="">Asus</span>
+										</label>
+										<label class="cust-check">
+											<input type="checkbox" name="brand4" value="lg"><i class="check-ic"><span></span></i><span class="">LG</span>
+										</label>
+
+										<label class="cust-check">
+											<input type="checkbox" name="brand5" value="Lenovo"><i class="check-ic"><span></span></i><span class="">Lenovo</span>
+										</label>
+										<label class="cust-check">
+											<input type="checkbox" name="brand6" value="Meizu"><i class="check-ic"><span></span></i><span class="">Meizu</span>
+										</label>
+										<label class="cust-check">
+											<input type="checkbox" name="brand7" value="Xiaomi"><i class="check-ic"><span></span></i><span class="">Xiaomi</span>
+										</label>
+										<label class="cust-check">
+											<input type="checkbox" name="brand8" value="htc"><i class="check-ic"><span></span></i><span class="">HTC</span>
+										</label>
+
+										<label class="cust-check">
+											<input type="checkbox" name="brand9" value="Bravis"><i class="check-ic"><span></span></i><span class="">Bravis</span>
+										</label>
+										<label class="cust-check">
+											<input type="checkbox" name="brand10" value="Huawei"><i class="check-ic"><span></span></i><span class="">Huawei</span>
+										</label>
+										<label class="cust-check">
+											<input type="checkbox" name="brand11" value="Nokia"><i class="check-ic"><span></span></i><span class="">Nokia</span>
+										</label>
+										<label class="cust-check">
+											<input type="checkbox" name="brand12" value="Motorola"><i class="check-ic"><span></span></i><span class="">Motorola</span>
+										</label>
+									</div>
+								</div>
+								<span class="show-more js-showMore">Show more</span>
+							</div>
+						</div>
+					</div>
+					<div class="main-content__sidebar-itm">
+						<div class="dropdown js-dropdown">
+							<span class="dropdown__btn js-dropdown-btn"><span class="value">Color</span><i class="chevron-down-ic"></i></span>
+							<div class="dropdown__content js-dropdown-content">
+								<div class="main-content__show-more js-showMoreCont">
+									<div class="check-set w-50">
+										<label class="cust-check">
+											<input type="checkbox" name="color1" value="Ivory"><i class="check-ic"><span></span></i><span class="">Ivory</span>
+										</label>
+										<label class="cust-check">
+											<input type="checkbox" name="color2" value="Deepgrey"><i class="check-ic"><span></span></i><span class="">Deep Grey</span>
+										</label>
+										<label class="cust-check">
+											<input type="checkbox" name="color3" value="Coffee"><i class="check-ic"><span></span></i><span class="">Coffee</span>
+										</label>
+										<label class="cust-check">
+											<input type="checkbox" name="color4" value="Red"><i class="check-ic"><span></span></i><span class="">Red</span>
+										</label>
+										<label class="cust-check">
+											<input type="checkbox" name="color5" value="Pink"><i class="check-ic"><span></span></i><span class="">Pink</span>
+										</label>
+										<label class="cust-check">
+											<input type="checkbox" name="color6" value="Yellow"><i class="check-ic"><span></span></i><span class="">Yellow</span>
+										</label>
+										<label class="cust-check">
+											<input type="checkbox" name="color7" value="Green"><i class="check-ic"><span></span></i><span class="">Green</span>
+										</label>
+										<label class="cust-check">
+											<input type="checkbox" name="color8" value="Black"><i class="check-ic"><span></span></i><span class="">Black</span>
+										</label>
+										<label class="cust-check">
+											<input type="checkbox" name="color9" value="Gold"><i class="check-ic"><span></span></i><span class="">Gold</span>
+										</label>
+									</div>
+								</div>
+								<span class="show-more js-showMore">Show more</span>
+							</div>
+						</div>
+					</div>
+					<div class="main-content__sidebar-itm">
+						<div class="dropdown js-dropdown">
+							<span class="dropdown__btn js-dropdown-btn"><span class="value">Body Weight</span><i class="chevron-down-ic"></i></span>
+							<div class="dropdown__content js-dropdown-content">
+								<div class="main-content__show-more js-showMoreCont">
+									<div class="check-set w-50">
+										<label class="cust-check">
+											<input type="checkbox" name="weight1" value="100"><i class="check-ic"><span></span></i><span class="">100</span>
+										</label>
+										<label class="cust-check">
+											<input type="checkbox" name="weight2" value="200"><i class="check-ic"><span></span></i><span class="">200</span>
+										</label>
+										<label class="cust-check">
+											<input type="checkbox" name="weight3" value="300"><i class="check-ic"><span></span></i><span class="">300</span>
+										</label>
+										<label class="cust-check">
+											<input type="checkbox" name="weight4" value="400"><i class="check-ic"><span></span></i><span class="">400</span>
+										</label>
+									</div>
+								</div>
+								<span class="show-more js-showMore">Show more</span>
+							</div>
+						</div>
+					</div>
+					<div class="main-content__sidebar-itm">
+						<div class="dropdown js-dropdown">
+							<span class="dropdown__btn js-dropdown-btn"><span class="value">CPU Cores</span><i class="chevron-down-ic"></i></span>
+							<div class="dropdown__content js-dropdown-content">
+								<div class="main-content__show-more js-showMoreCont">
+									<div class="check-set w-50">
+										<label class="cust-check">
+											<input type="checkbox" name="cores1" value="2"><i class="check-ic"><span></span></i><span class="">2</span>
+										</label>
+										<label class="cust-check">
+											<input type="checkbox" name="cores2" value="4"><i class="check-ic"><span></span></i><span class="">4</span>
+										</label>
+										<label class="cust-check">
+											<input type="checkbox" name="cores3" value="6"><i class="check-ic"><span></span></i><span class="">6</span>
+										</label>
+										<label class="cust-check">
+											<input type="checkbox" name="cores4" value="8"><i class="check-ic"><span></span></i><span class="">8</span>
+										</label>
+									</div>
+								</div>
+								<span class="show-more js-showMore">Show more</span>
+							</div>
+						</div>
+					</div>
+					<div class="main-content__sidebar-itm">
+						<div class="dropdown js-dropdown">
+							<span class="dropdown__btn js-dropdown-btn"><span class="value">CPU Type</span><i class="chevron-down-ic"></i></span>
+							<div class="dropdown__content js-dropdown-content">
+								<div class="main-content__show-more js-showMoreCont">
+									<div class="check-set w-50">
+										<label class="cust-check">
+											<input type="checkbox" name="type1" value="Celeron"><i class="check-ic"><span></span></i><span class="">Celeron</span>
+										</label>
+										<label class="cust-check">
+											<input type="checkbox" name="type2" value="Athlon"><i class="check-ic"><span></span></i><span class="">Athlon</span>
+										</label>
+										<label class="cust-check">
+											<input type="checkbox" name="type3" value="Pentium"><i class="check-ic"><span></span></i><span class="">Pentium</span>
+										</label>
+									</div>
+								</div>
+								<span class="show-more js-showMore">Show more</span>
+							</div>
+						</div>
+					</div>
+					<div class="main-content__sidebar-itm">
+						<div class="dropdown js-dropdown">
+							<span class="dropdown__btn js-dropdown-btn"><span class="value">Screen Size</span><i class="chevron-down-ic"></i></span>
+							<div class="dropdown__content js-dropdown-content">
+								<div class="main-content__show-more js-showMoreCont">
+									<div class="check-set w-50">
+										<label class="cust-check">
+											<input type="checkbox" name="screen1" value="4.1 - 4.5"><i class="check-ic"><span></span></i><span class="">4.1" - 4.5"</span>
+										</label>
+										<label class="cust-check">
+											<input type="checkbox" name="screen2" value="4.1 - 4.5"><i class="check-ic"><span></span></i><span class="">4.5" - 5"</span>
+										</label>
+										<label class="cust-check">
+											<input type="checkbox" name="screen3" value="4.1 - 4.5"><i class="check-ic"><span></span></i><span class="">5.1" - 5.5"</span>
+										</label>
+										<label class="cust-check">
+											<input type="checkbox" name="screen3" value="4.1 - 4.5"><i class="check-ic"><span></span></i><span class="">5.55" - 6"</span>
+										</label>
+									</div>
+								</div>
+								<span class="show-more js-showMore">Show more</span>
+							</div>
+						</div>
+					</div>
+					<div class="main-content__sidebar-itm">
+						<div class="dropdown js-dropdown">
+							<span class="dropdown__btn js-dropdown-btn"><span class="value">Operation System</span><i class="chevron-down-ic"></i></span>
+							<div class="dropdown__content js-dropdown-content">
+								<div class="main-content__show-more js-showMoreCont">
+									<div class="check-set w-100">
+										<label class="cust-check">
+											<input type="checkbox" name="system1" value="android"><i class="check-ic"><span></span></i><span class="">android</span>
+										</label>
+										<label class="cust-check">
+											<input type="checkbox" name="system2" value="ios"><i class="check-ic"><span></span></i><span class="">iOs</span>
+										</label>
+										<label class="cust-check">
+											<input type="checkbox" name="system3" value="Windows"><i class="check-ic"><span></span></i><span class="">Windows</span>
+										</label>
+										<label class="cust-check">
+											<input type="checkbox" name="system4" value="BlackBerry"><i class="check-ic"><span></span></i><span class="">BlackBerry</span>
+										</label>
+									</div>
+								</div>
+								<span class="show-more js-showMore">Show more</span>
+							</div>
+						</div>
+					</div>
+					<div class="main-content__sidebar-itm">
+						<div class="dropdown js-dropdown">
+							<span class="dropdown__btn js-dropdown-btn"><span class="value">Cellular</span><i class="chevron-down-ic"></i></span>
+							<div class="dropdown__content js-dropdown-content">
+								<div class="main-content__show-more js-showMoreCont">
+									<div class="check-set w-50">
+										<label class="cust-check">
+											<input type="checkbox" name="Cellular1" value="yes"><i class="check-ic"><span></span></i><span class="">yes</span>
+										</label>
+										<label class="cust-check">
+											<input type="checkbox" name="Cellular2" value="no"><i class="check-ic"><span></span></i><span class="">no</span>
+										</label>
+									</div>
+								</div>
+								<span class="show-more js-showMore">Show more</span>
+							</div>
+						</div>
+					</div>
+					<div class="main-content__sidebar-itm">
+						<div class="dropdown js-dropdown">
+							<span class="dropdown__btn js-dropdown-btn"><span class="value">Ram</span><i class="chevron-down-ic"></i></span>
+							<div class="dropdown__content js-dropdown-content">
+								<div class="main-content__show-more js-showMoreCont">
+									<div class="check-set w-50">
+										<label class="cust-check">
+											<input type="checkbox" name="ram1" value="2"><i class="check-ic"><span></span></i><span class="">2 Gb</span>
+										</label>
+										<label class="cust-check">
+											<input type="checkbox" name="ram2" value="4"><i class="check-ic"><span></span></i><span class="">4 Gb</span>
+										</label>
+										<label class="cust-check">
+											<input type="checkbox" name="ram3" value="6"><i class="check-ic"><span></span></i><span class="">6 Gb</span>
+										</label>
+										<label class="cust-check">
+											<input type="checkbox" name="ram4" value="8"><i class="check-ic"><span></span></i><span class="">8 Gb</span>
+										</label>
+										<label class="cust-check">
+											<input type="checkbox" name="ram5" value="16"><i class="check-ic"><span></span></i><span class="">16 Gb</span>
+										</label>
+										<label class="cust-check">
+											<input type="checkbox" name="ram6" value="32"><i class="check-ic"><span></span></i><span class="">32 Gb</span>
+										</label>
+										<label class="cust-check">
+											<input type="checkbox" name="ram7" value="64"><i class="check-ic"><span></span></i><span class="">64 Gb</span>
+										</label>
+									</div>
+								</div>
+								<span class="show-more js-showMore">Show more</span>
+							</div>
+						</div>
+					</div>
+				</form>
+			</aside>
+			<div class="main-content__right">
+				<div class="main-content__right-top">
+					<span class="menu-burger js-sidebarToggle" id="js-sidebarToggle">
+						<span class="mMt one"></span>
+						<span class="mMt two"></span>
+						<span class="mMt three"></span>
+						<span class="mMt four"></span>
+					</span>
+					<ul class="content-filter">
+						<li class="content-filter__itm active"><a href="#" class="content-filter__lnk">Popular products</a></li>
+						<li class="content-filter__itm"><a href="#" class="content-filter__lnk">Low price</a></li>
+						<li class="content-filter__itm"><a href="#" class="content-filter__lnk">High price</a></li>
+					</ul>
+					<ul class="grid-switch">
+						<li class="grid-switch__itm active"><span class="grid-switch__lnk js-styleItemsColumns"><i class="grid-ic"></i></span></li>
+						<li class="grid-switch__itm"><span class="grid-switch__lnk js-styleItemsHorizontal"><i class="list-ic"></i></span></li>
+					</ul>
+				</div>
+				<div class="products-list style-columns">
+					<div class="prod-itm">
+						<div class="prod-itm__top">
+							<span class="sale">Sale 10%</span>
+							<ul class="prod-itm__top-links">
+								<li><a href="#"><i class="list-thin-ic"></i></a></li>
+								<li><a href="#"><i class="heart-light-ic"></i></a></li>
+							</ul>
+						</div>
+						<a href="#" class="prod-itm__a">
+							<span class="img-inner-box">
+								<img src="./img/rectangle.png" alt="" class="rectangle">
+								<img src="./img/products/phone1.png" alt="" class="main-img">
+							</span>
+						</a>
+						<a href="#" class="prod-itm__name">Asus ZenFone Go ZB452KG<br/>(black and white)</a>
+						<div class="rate__wrap">
+							<div class="rate" data-rate-value=6></div>
+							<span class="rate__count">12</span>
+						</div>
+						<div class="prod-itm__bottom">
+							<span class="price">$ 384.4</span>
+							<a href="#" class="prod-itm__cart"><i class="cart2-ic"></i></a>
+						</div>
+					</div>
+					<div class="prod-itm">
+						<div class="prod-itm__top">
+							<span class="sale">Sale 10%</span>
+							<ul class="prod-itm__top-links">
+								<li><a href="#"><i class="list-thin-ic"></i></a></li>
+								<li><a href="#"><i class="heart-light-ic"></i></a></li>
+							</ul>
+						</div>
+						<a href="#" class="prod-itm__a">
+							<span class="img-inner-box">
+								<img src="./img/rectangle.png" alt="" class="rectangle">
+								<img src="./img/products/phone2.png" alt="" class="main-img">
+							</span>
+						</a>
+						<a href="#" class="prod-itm__name">Asus ZenFone Go ZB452KG<br/>(black and white)</a>
+						<div class="rate__wrap">
+							<div class="rate" data-rate-value=6></div>
+							<span class="rate__count">12</span>
+						</div>
+						<div class="prod-itm__bottom">
+							<span class="price">$ 384.4</span>
+							<a href="#" class="prod-itm__cart"><i class="cart2-ic"></i></a>
+						</div>
+					</div>
+					<div class="prod-itm">
+						<div class="prod-itm__top">
+							<span class="sale">Sale 10%</span>
+							<ul class="prod-itm__top-links">
+								<li><a href="#"><i class="list-thin-ic"></i></a></li>
+								<li><a href="#"><i class="heart-light-ic"></i></a></li>
+							</ul>
+						</div>
+						<a href="#" class="prod-itm__a">
+							<span class="img-inner-box">
+								<img src="./img/rectangle.png" alt="" class="rectangle">
+								<img src="./img/products/phone3.png" alt="" class="main-img">
+							</span>
+						</a>
+						<a href="#" class="prod-itm__name">Asus ZenFone Go ZB452KG<br/>(black and white)</a>
+						<div class="rate__wrap">
+							<div class="rate" data-rate-value=6></div>
+							<span class="rate__count">12</span>
+						</div>
+						<div class="prod-itm__bottom">
+							<span class="price">$ 384.4</span>
+							<a href="#" class="prod-itm__cart"><i class="cart2-ic"></i></a>
+						</div>
+					</div>
+					<div class="prod-itm">
+						<div class="prod-itm__top">
+							<span class="sale">Sale 10%</span>
+							<ul class="prod-itm__top-links">
+								<li><a href="#"><i class="list-thin-ic"></i></a></li>
+								<li><a href="#"><i class="heart-light-ic"></i></a></li>
+							</ul>
+						</div>
+						<a href="#" class="prod-itm__a">
+							<span class="img-inner-box">
+								<img src="./img/rectangle.png" alt="" class="rectangle">
+								<img src="./img/products/phone4.png" alt="" class="main-img">
+							</span>
+						</a>
+						<a href="#" class="prod-itm__name">Asus ZenFone Go ZB452KG<br/>(black and white)</a>
+						<div class="rate__wrap">
+							<div class="rate" data-rate-value=6></div>
+							<span class="rate__count">12</span>
+						</div>
+						<div class="prod-itm__bottom">
+							<span class="price">$ 384.4</span>
+							<a href="#" class="prod-itm__cart"><i class="cart2-ic"></i></a>
+						</div>
+					</div>
+					<div class="prod-itm">
+						<div class="prod-itm__top">
+							<span class="sale">Sale 10%</span>
+							<ul class="prod-itm__top-links">
+								<li><a href="#"><i class="list-thin-ic"></i></a></li>
+								<li><a href="#"><i class="heart-light-ic"></i></a></li>
+							</ul>
+						</div>
+						<a href="#" class="prod-itm__a">
+							<span class="img-inner-box">
+								<img src="./img/rectangle.png" alt="" class="rectangle">
+								<img src="./img/products/phone5.png" alt="" class="main-img">
+							</span>
+						</a>
+						<a href="#" class="prod-itm__name">Asus ZenFone Go ZB452KG<br/>(black and white)</a>
+						<div class="rate__wrap">
+							<div class="rate" data-rate-value=6></div>
+							<span class="rate__count">12</span>
+						</div>
+						<div class="prod-itm__bottom">
+							<span class="price">$ 384.4</span>
+							<a href="#" class="prod-itm__cart"><i class="cart2-ic"></i></a>
+						</div>
+					</div>
+					<div class="prod-itm">
+						<div class="prod-itm__top">
+							<span class="sale">Sale 10%</span>
+							<ul class="prod-itm__top-links">
+								<li><a href="#"><i class="list-thin-ic"></i></a></li>
+								<li><a href="#"><i class="heart-light-ic"></i></a></li>
+							</ul>
+						</div>
+						<a href="#" class="prod-itm__a">
+							<span class="img-inner-box">
+								<img src="./img/rectangle.png" alt="" class="rectangle">
+								<img src="./img/products/phone6.png" alt="" class="main-img">
+							</span>
+						</a>
+						<a href="#" class="prod-itm__name">Asus ZenFone Go ZB452KG<br/>(black and white)</a>
+						<div class="rate__wrap">
+							<div class="rate" data-rate-value=6></div>
+							<span class="rate__count">12</span>
+						</div>
+						<div class="prod-itm__bottom">
+							<span class="price">$ 384.4</span>
+							<a href="#" class="prod-itm__cart"><i class="cart2-ic"></i></a>
+						</div>
+					</div>
+					<div class="prod-itm">
+						<div class="prod-itm__top">
+							<span class="sale">Sale 10%</span>
+							<ul class="prod-itm__top-links">
+								<li><a href="#"><i class="list-thin-ic"></i></a></li>
+								<li><a href="#"><i class="heart-light-ic"></i></a></li>
+							</ul>
+						</div>
+						<a href="#" class="prod-itm__a">
+							<span class="img-inner-box">
+								<img src="./img/rectangle.png" alt="" class="rectangle">
+								<img src="./img/products/phone7.png" alt="" class="main-img">
+							</span>
+						</a>
+						<a href="#" class="prod-itm__name">Asus ZenFone Go ZB452KG<br/>(black and white)</a>
+						<div class="rate__wrap">
+							<div class="rate" data-rate-value=6></div>
+							<span class="rate__count">12</span>
+						</div>
+						<div class="prod-itm__bottom">
+							<span class="price">$ 384.4</span>
+							<a href="#" class="prod-itm__cart"><i class="cart2-ic"></i></a>
+						</div>
+					</div>
+					<div class="prod-itm">
+						<div class="prod-itm__top">
+							<span class="sale">Sale 10%</span>
+							<ul class="prod-itm__top-links">
+								<li><a href="#"><i class="list-thin-ic"></i></a></li>
+								<li><a href="#"><i class="heart-light-ic"></i></a></li>
+							</ul>
+						</div>
+						<a href="#" class="prod-itm__a">
+							<span class="img-inner-box">
+								<img src="./img/rectangle.png" alt="" class="rectangle">
+								<img src="./img/products/phone8.png" alt="" class="main-img">
+							</span>
+						</a>
+						<a href="#" class="prod-itm__name">Asus ZenFone Go ZB452KG<br/>(black and white)</a>
+						<div class="rate__wrap">
+							<div class="rate" data-rate-value=6></div>
+							<span class="rate__count">12</span>
+						</div>
+						<div class="prod-itm__bottom">
+							<span class="price">$ 384.4</span>
+							<a href="#" class="prod-itm__cart"><i class="cart2-ic"></i></a>
+						</div>
+					</div>
+					<div class="prod-itm">
+						<div class="prod-itm__top">
+							<span class="sale">Sale 10%</span>
+							<ul class="prod-itm__top-links">
+								<li><a href="#"><i class="list-thin-ic"></i></a></li>
+								<li><a href="#"><i class="heart-light-ic"></i></a></li>
+							</ul>
+						</div>
+						<a href="#" class="prod-itm__a">
+							<span class="img-inner-box">
+								<img src="./img/rectangle.png" alt="" class="rectangle">
+								<img src="./img/products/phone9.png" alt="" class="main-img">
+							</span>
+						</a>
+						<a href="#" class="prod-itm__name">Asus ZenFone Go ZB452KG<br/>(black and white)</a>
+						<div class="rate__wrap">
+							<div class="rate" data-rate-value=6></div>
+							<span class="rate__count">12</span>
+						</div>
+						<div class="prod-itm__bottom">
+							<span class="price">$&nbsp;384.4</span>
+							<a href="#" class="prod-itm__cart"><i class="cart2-ic"></i></a>
+						</div>
+					</div>
+				</div>
+				<div class="main-content__right-bottom">
+					<nav>
+						<div class="pagination">
+							<a href="#" class="prev"><i class="arrow-left-ic"></i>Previous page</a>
+							<span class="current-page">1</span>
+							<a href="#" class="next">Next page<i class="arrow-right-ic"></i></a>
+						</div>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</div>
+</main>
+        <footer class="footer">
+	<div class="container">
+		<div class="footer__top">
+			<div class="logo__wrap">
+				<a href="#" class="logo">Quantum</a>
+			</div>
+			<nav>
+				<ul class="menu">
+					<li class="menu__itm dropdown js-dropdown">
+						<span class="dropdown__btn js-dropdown-btn"><span class="value">Shop</span><i class="chevron-down-ic"></i></span>
+						<div class="dropdown__content js-dropdown-content">
+							<ul class="dropdown__list select">
+								<li><span>Shop 1</span></li>
+								<li><span>Shop 2</span></li>
+								<li><span>Shop 3</span></li>
+							</ul>
+						</div>
+					</li>
+					<li class="menu__itm"><a href="#" class="menu__lnk">Journal</a></li>
+					<li class="menu__itm"><a href="#" class="menu__lnk">About</a></li>
+					<li class="menu__itm"><a href="#" class="menu__lnk">Contacts</a></li>
+				</ul>
+			</nav>
+			<ul class="social">
+				<li class="social__itm"><a href="#" class="social__lnk"><i class="facebook-logo-ic"></i></a></li>
+				<li class="social__itm"><a href="#" class="social__lnk"><i class="twitter-logo-ic"></i></a></li>
+				<li class="social__itm"><a href="#" class="social__lnk"><i class="instagram-logo-ic"></i></a></li>
+				<li class="social__itm"><a href="#" class="social__lnk"><i class="youtube-logo-ic"></i></a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="footer__bottom">
+		<div class="container">
+			<div class="footer__bottom-cont">
+				<nav>
+					<ul class="menu">
+						<li class="menu__itm"><span class="menu__lnk">&copy; 2016. Quantum UI kit</span></li>
+						<li class="menu__itm"><a href="#" class="menu__lnk">Privacy Policy</a></li>
+						<li class="menu__itm"><a href="#" class="menu__lnk">Terms of Use</a></li>
+					</ul>
+				</nav>
+				<div class="payment__wrap">
+					<span class="payment__name">Accepted payment methods</span>
+					<ul class="payment">
+						<li class="payment__itm"><i class="visa-ic"></i></li>
+						<li class="payment__itm"><i class="mastercard-ic"></i></li>
+						<li class="payment__itm"><i class="paypal-ic"></i></li>
+						<li class="payment__itm"><i class="amazon-ic"></i></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+
+<div class="page-modal" id="sign-in">
+	<div class="page-modal__content">
+		<div class="page-modal__top">
+			<h3>Sign In</h3>
+			<span class="close"><i class="times-ic"></i></span>
+		</div>
+		<div class="page-modal__middle">
+			<form action="#">
+				<label class="cust-inp">
+					<input type="text" placeholder="E-mail">
+					<span class="help-block">Enter your email</span>
+				</label>
+				<label class="cust-inp">
+					<input type="password" placeholder="Password">
+					<span class="help-block">Enter your password</span>
+				</label>
+				<div class="btn-wrap">
+					<input type="submit" class="btn-primary" value="Sign in">
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script async src="https://static.addtoany.com/menu/page.js"></script>
+        <script src="./js/main.js"></script>
+        <script src="./js/vendor.js"></script>
+    </body>
+</html>
