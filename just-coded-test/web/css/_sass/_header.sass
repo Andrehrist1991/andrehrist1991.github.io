@@ -1,0 +1,107 @@
+@import "_var"
+
+/* ================= Header ================= */
+
+.main-head
+	padding: 180px 0 85px
+	background-size: cover
+	background-repeat: no-repeat
+	background-attachment: fixed
+	position: relative
+	&:before
+		content: ""
+		position: absolute
+		top: 0
+		right: 0
+		bottom: 0
+		left: 0
+		display: block
+		background-color: rgba(36, 40, 47, .96)
+		z-index: 1
+	&__top
+		background-color: $pr_bg
+		padding: 27px 0 0
+		position: fixed
+		top: 0
+		right: 0
+		left: 0
+		z-index: 2
+		@include trans
+		&.scrolling
+			padding: 15px 0 0
+			.page-menu
+				&__itm
+					a
+						padding: 5px 15px 15px
+			.logo
+				&__wrap
+					margin: -5px 0 0 7px
+
+	&__cont
+		display: flex
+		justify-content: space-between
+		align-items: center
+		.logo
+			&__wrap
+				margin: -26px 0 0 7px
+	&__bottom
+		position: relative
+		z-index: 1
+		color: $sec_text
+		max-width: 60%
+		.descr-text
+			margin: 5px 0 0
+	.page-menu
+		margin: 0 -59px 0 0
+
+.logo
+	&__wrap
+	display: flex
+	align-items: center
+	@include trans
+	&__name
+		color: $sec_text
+		font-family: 'NexaBold', sans-serif
+		text-transform: uppercase
+		font-size: 26px
+		display: inline-block
+		margin: 0 0 -4px 28px
+		letter-spacing: 1.6px
+
+.page-menu
+	display: flex
+	&__itm
+		margin: 0 18px
+		&.active
+			a
+				&:before
+					left: 0
+					width: 100%
+		a
+			color: $sec_text
+			text-transform: uppercase
+			padding: 10px 15px 38px
+			display: inline-block
+			position: relative
+			letter-spacing: 0.2px
+			@include trans
+			&:before
+				content: ""
+				position: absolute
+				height: 3px
+				display: block
+				@include trans
+				background-color: $main
+				left: 50%
+				width: 0px
+				bottom: 0
+			&:hover
+				&:before
+					width: 100%
+					left: 0
+
+
+
+
+
+

@@ -1,0 +1,192 @@
+@media only screen and (max-width : 1440px)
+	.main-head
+		.page-menu
+			margin: 0 0 0 0
+
+
+@media only screen and (max-width : 1199px)
+	h1
+		font-size: 2.3rem
+	.main-head
+		padding: 140px 0 45px
+	.page-menu
+		&__itm
+			&:last-child
+				margin-right: 0
+	.page-section
+		padding: 60px 0 30px
+		&.style-team
+			padding-top: 80px
+
+
+
+
+@media only screen and (max-width : 991px)
+	.foot-info
+		margin-bottom: 25px
+		padding: 0 !important
+
+
+
+
+
+
+@media only screen and (min-width : 768px) and (max-width : 991px)
+	.page-menu
+		&__itm
+			margin: 0 5px
+
+
+
+
+
+@media only screen and (max-width : 767px)
+	h1
+		font-size: 2rem
+
+	.main-head
+		&__top
+			padding: 45px 0 25px
+			&.scrolling
+				padding: 15px 0 15px
+				.page-menu
+					&__itm
+						a
+							padding: 10px 0
+				.toggle-btn
+					top: 7px
+		&__bottom
+			max-width: 100%
+		&__cont
+			.toggle-btn
+				position: absolute
+				top: 15px
+				left: -100px
+
+	.team-slide
+		&__bottom
+			padding: 25px 0px 0 0px
+			flex-direction: column
+			align-items: center
+			.social
+				margin: 10px 0 0
+
+	.reviews-slider
+		margin: 35px 0 0
+
+	.reviews-slide
+		padding: 15px 60px 0
+
+	.page-section
+		&.style-team
+			padding-top: 50px
+		&.style-reviews
+			padding-bottom: 50px
+
+	.main-foot
+		padding: 45px 0 0
+
+	.page-menu
+		flex-direction: column
+		align-items: flex-end
+		&__wrap
+			position: fixed
+			min-width: 200px
+			padding: 70px 30px 40px
+			top: 0
+			bottom: 0
+			right: 0
+			background-color: rgba(36, 40, 47, .9)
+			@include trans
+			transform: translateX(100%)
+			&.open
+				transform: translateX(0%)
+				.toggle-btn
+					left: 15px
+		&__itm
+			margin: 0
+			a
+				padding: 10px 0
+
+
+
+
+
+
+@media only screen and (max-width : 575px)
+	/*  */
+
+
+
+
+
+@media only screen and (max-width : 480px)
+	.reviews-slide
+		padding: 15px 30px 0
+		&__descr
+			font-size: 13px
+
+
+
+
+
+
+
+
+
+// Min width ================================================
+@media only screen and (min-width : 480px)
+	/*  */
+
+
+
+@media only screen and (min-width : 768px)
+	.main-head
+		&__cont
+			.toggle-btn
+				display: none
+
+
+
+@media only screen and (min-width : 992px)
+	/*  */
+
+
+
+@media only screen and (min-width : 1200px)
+	.container
+		max-width: 1154px
+		&.style-header
+			max-width: 1386px
+
+
+
+
+
+
+
+
+
+@media (pointer: fine)
+	.team-slide
+		&__top
+			&:hover
+				&:before
+					opacity: 1
+				.team-slide
+					&__img
+						transform: scale(1.2)
+					&__btn
+						opacity: 1
+
+
+@media (pointer: coarse)
+	.team-slide
+		&__btn
+			width: 100%
+			height: 100%
+			opacity: 0 !important
+		&__img
+			left: 50%
+			transition: none
+			transform: translateX(-50%)

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include "head.twig" %}
+
+<body>
+	<div class="preloader"></div>
+	<div class="wrapper">
+		<header class="main-head" style="background-image: url('/web/img/home/about-bg.jpg');">
+			{% include "header.twig" %}
+		</header>
+		
+		<div class="layout">
+			{% block page %}{% endblock %}
+		</div><!-- layout -->
+
+		<footer class="main-foot">
+			{% include "footer.twig" %}
+		</footer>
+		<div class="loaded"></div>
+		<div class="btn-top"></div>
+	</div><!-- wrapper END -->
+	{% include "modal-set.twig" %}
+	{% include "foot_scripts.twig" %}
+</body>
+</html>

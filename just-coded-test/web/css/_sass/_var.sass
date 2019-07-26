@@ -1,0 +1,176 @@
+@import "_reset"
+@import "_libs"
+@import "_icons"
+@import "_btns"
+
+
+@mixin trans
+	transition: all 0.3s ease
+
+.img-inner-box
+	position: relative
+	display: block
+	text-decoration: none !important
+	border: none !important
+	width: 100%
+	img
+		position: relative
+		z-index: 1
+		display: block
+		width: 100% !important
+		height: auto !important
+
+	.main-img
+		position: absolute
+		z-index: 2
+		top: 0
+		left: 0
+		height: 100% !important
+		object-fit: contain
+
+
+// body =============================
+
+body
+	position: relative
+	min-width: 320px
+	font-family: 'OpenSansRegular', sans-serif
+	font-size: 14px
+	line-height: 1.85em
+	font-weight: normal
+	color: $text
+	-webkit-font-smoothing: antialiased
+	&.mnu-open
+		overflow: hidden
+		position: relative
+		&:before
+			content: ""
+			position: absolute
+			top: 0
+			right: 0
+			bottom: 0
+			left: 0
+			background-color: rgba(36, 40, 47, .7)
+			z-index: 2
+
+
+.wrapper
+	min-height: 100vh
+	display: flex
+	flex-direction: column
+	overflow: hidden
+
+.layout
+	flex: 1
+	min-height: 200px
+
+.int-expl
+	.wrapper
+		display: block
+
+a
+	&:hover
+		text-decoration: none
+
+a,
+button
+	&:focus
+		outline: none
+	&:active
+		outline: none !important
+		box-shadow: none !important
+
+h1
+	font-family: 'RalewayBold', sans-serif
+	text-transform: uppercase
+	letter-spacing: 0.5px
+
+p
+	letter-spacing: 0.35px
+
+.page-section
+	padding: 116px 0 30px
+	&__hdg
+		font-family: 'RalewaySemiBold', sans-serif
+		text-transform: uppercase
+		text-align: center
+		font-size: 24px
+		color: $title
+		position: relative
+		padding: 0 0 25px
+		margin: 0 0 35px
+		letter-spacing: -0.9px
+		&:before
+			content: ""
+			position: absolute
+			display: block
+			background-color: $main
+			height: 2px
+			width: 80px
+			bottom: 0
+			left: 50%
+			transform: translateX(-50%)
+		&.style-dark-line
+			&:before
+				background-color: $text
+
+.social
+	display: flex
+	&__itm
+		margin: 0 5px
+		&:last-child
+			margin-right: 0
+		&:first-child
+			margin-left: 0
+	&__lnk
+		border-radius: 50%
+		background-color: #dedede
+		display: inline-block
+		width: 35px
+		height: 35px
+		background-size: 20px
+		background-position: center
+		background-repeat: no-repeat
+		@include trans
+		&:hover
+			background-color: $main
+		&.facebook
+			background-image: url("../img/_style/_svg/_social/social_fb_white.svg")
+		&.twitter
+			background-image: url("../img/_style/_svg/_social/social_tw_white.svg")
+		&.g-plus
+			background-image: url("../img/_style/_svg/_social/social_g+_white.svg")
+		&.dribbble
+			background-size: 15px
+			background-image: url("../img/_style/_svg/_social/social_dribbble_white.svg")
+	&.style-2
+		.social
+			&__lnk
+				background-color: transparent
+				border: 1px solid $third_text
+				&:hover
+					background-color: $main
+					border-color: $main
+					&.facebook
+						background-image: url("../img/_style/_svg/_social/social_fb_white.svg")
+					&.twitter
+						background-image: url("../img/_style/_svg/_social/social_tw_white.svg")
+					&.g-plus
+						background-image: url("../img/_style/_svg/_social/social_g+_white.svg")
+					&.dribbble
+						background-size: 15px
+						background-image: url("../img/_style/_svg/_social/social_dribbble_white.svg")
+				&.facebook
+					background-image: url("../img/_style/_svg/_social/social_fb.svg")
+				&.twitter
+					background-image: url("../img/_style/_svg/_social/social_tw.svg")
+				&.g-plus
+					background-image: url("../img/_style/_svg/_social/social_g+.svg")
+				&.dribbble
+					background-image: url("../img/_style/_svg/_social/social_dribbble.svg")
+
+
+
+
+
+

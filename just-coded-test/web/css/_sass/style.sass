@@ -1,0 +1,237 @@
+@import "_bourbon/bourbon"
+@import "_header"
+
+// Main Styles =========================
+
+
+// Home =========================
+
+.team-slide
+	display: flex
+	flex-direction: column
+	&__top
+		overflow: hidden
+		position: relative
+		height: 300px
+		&:before
+			content: ""
+			position: absolute
+			top: 0
+			right: 0
+			bottom: 0
+			left: 0
+			background-color: rgba(36, 40, 47, .7)
+			z-index: 1
+			opacity: 0
+			@include trans
+	&__img
+		transform: scale(1)
+		transition: all 4s ease
+		position: absolute
+		width: auto
+		height: 100%
+		object-fit: fill
+	&__btn
+		position: absolute
+		z-index: 2
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+		opacity: 0
+	&__bottom
+		display: flex
+		justify-content: space-between
+		padding: 25px 0px 0 10px
+		&-left
+			line-height: 1.4em
+		&-name,
+		&-pos
+			display: block
+		&-name
+			text-transform: uppercase
+			font-size: 16px
+			font-family: 'RalewayMedium', sans-serif
+			color: #232323
+		&-pos
+			color: $main
+			text-transform: capitalize
+		.social
+			margin: 5px 0 0
+
+.page-section
+	&.style-team
+		padding-top: 148px
+		.btn-wrap
+			margin: 35px 0 0
+	&.style-reviews
+		background-color: $bgc
+		padding-bottom: 85px
+
+.reviews-slider
+	margin: 50px 0 0
+	.swiper-button-prev,
+	.swiper-button-next
+		background-size: 10px
+		top: 24%
+	.swiper-button-prev
+		left: -10px
+	.swiper-button-next
+		right: -10px
+
+.reviews-slide
+	display: flex
+	flex-direction: column
+	align-items: center
+	text-align: center
+	padding: 15px 120px 0
+	&__img-wrp
+		position: relative
+		overflow: hidden
+		width: 90px
+		height: 90px
+		border-radius: 50%
+	&__img
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+	&__descr
+		margin: 30px 0 15px
+		font-family: 'OpenSansLight', sans-serif
+		p
+			letter-spacing: 0.7px
+	&__bottom
+		line-height: 2.1em
+	&__name,
+	&__pos
+		display: block
+		text-transform: capitalize
+		letter-spacing: .6px
+	&__name
+		color: $main
+		text-transform: uppercase
+		font-family: 'OpenSansSemiBold', sans-serif
+		font-size: 16px
+
+.swiper-button-prev
+	background-image: url("../img/_style/_svg/arrow-left.svg")
+
+.swiper-button-next
+	background-image: url("../img/_style/_svg/arrow-right.svg")
+
+.swiper-button-prev,
+.swiper-button-next
+	background-size: 10px
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Footer ================================
+.main-foot
+	background-color: $sec_bg
+	padding: 77px 0 0
+	color: $third_text
+	&__top
+		padding: 0 0 27px
+	&__bottom-cont
+		display: flex
+		justify-content: space-between
+		align-items: center
+	&__bottom
+		background-color: $title
+		padding: 15px 0
+		.copyright
+			margin: -5px 0 0
+
+.copyright
+	font-size: 12px
+	letter-spacing: 0.75px
+
+.foot-info
+	h6
+		color: $main
+		text-transform: uppercase
+		font-family: 'OpenSansSemiBold', sans-serif
+		font-size: 14px
+		letter-spacing: 0.6px
+		margin: 0 0 23px
+	p
+		line-height: 1.65em
+	ul
+		line-height: 1.45em
+		margin: 0 0 22px
+		li
+			letter-spacing: 0.5px
+	.page-form
+		input
+			&:not([class^="btn-"])
+				border-color: $third_text
+				&::placeholder
+					color: $third_text
+					opacity: 1
+
+
+
+
+//Page forms
+.page-form
+	.form-group
+		margin-bottom: .8rem
+	[class^="btn-"]
+		width: 100%
+		font-size: 14px
+		padding: 5px 15px 5px
+		letter-spacing: .5px
+	input
+		&:not([class^="btn-"])
+			background-color: transparent
+			border-radius: 0px
+			font-size: 14px
+			letter-spacing: 1.1px
+
+	input,
+	[class^="btn-"]
+		height: 36px
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@import "_fixes"
+/* ========================== Media Queries ========================== */
+@import "_media"
