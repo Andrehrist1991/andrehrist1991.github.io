@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "cc1860867c753000ed72f8b825a1ff63",
+    "revision": "1575385f090a71a101e1f01adedb5ce2",
     "url": "/Portfolio/index.html"
   },
   {
-    "revision": "e568d792fc24d2ccd3a5",
+    "revision": "2f5ceff2f512ac0e0204",
     "url": "/Portfolio/static/css/2.e63f6f6c.chunk.css"
   },
   {
-    "revision": "a8a7860b996eea5f88ca",
-    "url": "/Portfolio/static/css/main.0631819b.chunk.css"
+    "revision": "afe730d305f506082f3e",
+    "url": "/Portfolio/static/css/main.044404a1.chunk.css"
   },
   {
-    "revision": "e568d792fc24d2ccd3a5",
-    "url": "/Portfolio/static/js/2.1458d760.chunk.js"
+    "revision": "2f5ceff2f512ac0e0204",
+    "url": "/Portfolio/static/js/2.d865534b.chunk.js"
   },
   {
-    "revision": "a8a7860b996eea5f88ca",
-    "url": "/Portfolio/static/js/main.d1dd47c4.chunk.js"
+    "revision": "afe730d305f506082f3e",
+    "url": "/Portfolio/static/js/main.b1995849.chunk.js"
   },
   {
     "revision": "6b64d540f1308ee928ad",
@@ -34,14 +34,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "746b69f0f683ddb1e53427c137d2b220",
     "url": "/Portfolio/static/media/OpenSansSemiBold.746b69f0.ttf"
-  },
-  {
-    "revision": "e53c3d4bca286392c5d8d2b503b9e54e",
-    "url": "/Portfolio/static/media/astra.e53c3d4b.jpg"
-  },
-  {
-    "revision": "3774949321acf3af3332dc0db574b7e9",
-    "url": "/Portfolio/static/media/best-travel.37749493.jpg"
   },
   {
     "revision": "3222699bd8179275b290a269ebf38ce3",
@@ -64,20 +56,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Portfolio/static/media/down-chevron.51da0d7f.svg"
   },
   {
-    "revision": "0b74306ba3e6585a845cf4728bd232e6",
-    "url": "/Portfolio/static/media/dptsu.0b74306b.jpg"
-  },
-  {
     "revision": "70d57ecd52a33ded8ea783657508162a",
     "url": "/Portfolio/static/media/facebook-hover.70d57ecd.svg"
   },
   {
     "revision": "d3291f0d309cf4b42efa27dd430c9a3f",
     "url": "/Portfolio/static/media/facebook.d3291f0d.svg"
-  },
-  {
-    "revision": "6fb20db5f2b823e79e2ed3382c299bc5",
-    "url": "/Portfolio/static/media/hampton.6fb20db5.jpg"
   },
   {
     "revision": "2baa383ee90927c6d1c3574e862b6a1b",
@@ -90,10 +74,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "ea2531d1f9990db9ec24a6d43403f766",
     "url": "/Portfolio/static/media/kraina-ua.ea2531d1.jpg"
-  },
-  {
-    "revision": "0e8c28e8b66c09a4316582fbc594a902",
-    "url": "/Portfolio/static/media/little-caesras.0e8c28e8.jpg"
   },
   {
     "revision": "02364e40dc31015080a5802ee0e7f9d9",
@@ -126,6 +106,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "860c368797724a96ff2bab20be85d16c",
     "url": "/Portfolio/static/media/ridewap.860c3687.jpg"
+  },
+  {
+    "revision": "f4ec2dd047be351df2ff0c5f52c6979e",
+    "url": "/Portfolio/static/media/secolino.f4ec2dd0.jpg"
   },
   {
     "revision": "336a38a40f5d8cb6adfe2333cba96873",
